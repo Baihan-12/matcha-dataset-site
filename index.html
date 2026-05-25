@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MATCHA Dataset</title>
+    <meta
+      name="description"
+      content="MATCHA is a Chinese Weibo dataset for multi-disorder mental health research with controlled access."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="nav">
+        <a class="brand" href="#top">MATCHA</a>
+        <div class="nav-links">
+          <a href="#overview">Overview</a>
+          <a href="#statistics">Statistics</a>
+          <a href="#figures">Figures</a>
+          <a href="#materials">Materials</a>
+          <a href="#samples">Samples</a>
+          <a href="#access">Access</a>
+        </div>
+      </nav>
+
+      <section class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Dataset Website</p>
+          <h1>MATCHA: Multi-disorder Mental Health Data in China</h1>
+          <p class="lead">
+            MATCHA is a large-scale Chinese Weibo dataset for mental health
+            research. It links disorder-specific Super-Topic discussions with
+            user timeline posts, supports cross-lingual analysis, and is
+            released under a controlled-access policy.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#access">Access Policy</a>
+            <a class="button secondary" href="#statistics">View Statistics</a>
+          </div>
+          <ul class="hero-notes">
+            <li>7 DSM-5 disorder groups plus a control cohort</li>
+            <li>47,131 users and 1.8M+ de-identified posts</li>
+            <li>38 symptom labels and 12 life-event labels</li>
+          </ul>
+        </div>
+        <div class="hero-card">
+          <img
+            src="assets/overview-new.png"
+            alt="Overview of the MATCHA dataset collection and annotation pipeline"
+          />
+          <p>
+            Overview of the MATCHA data collection and LLM-assisted annotation
+            pipeline.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="overview">
+        <div class="section-heading">
+          <p class="eyebrow">Overview</p>
+          <h2>What this repository provides</h2>
+        </div>
+        <div class="two-column">
+          <div class="panel">
+            <p>
+              MATCHA covers attention-deficit/hyperactivity disorder, autism
+              spectrum disorder, bipolar disorder, depressive disorders,
+              generalized anxiety disorder, obsessive-compulsive disorder, and
+              schizophrenia, together with a control group.
+            </p>
+            <p>
+              The dataset combines disorder-related Weibo Super-Topic posts
+              (STP) and user homepage posts (HP), enabling behavioral,
+              linguistic, and cross-lingual analyses at scale.
+            </p>
+          </div>
+          <div class="panel">
+            <ul class="feature-list">
+              <li>Public-facing website with summary statistics and figures</li>
+              <li>Representative, non-release sample snippets only</li>
+              <li>Controlled data access after the anonymity period</li>
+              <li>No full raw dataset is hosted on this website</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="statistics">
+        <div class="section-heading">
+          <p class="eyebrow">Statistics</p>
+          <h2>Dataset scale at a glance</h2>
+        </div>
+        <div class="stats-grid" id="stats-grid"></div>
+        <div class="table-card">
+          <div class="table-card-head">
+            <h3>Dataset composition by group</h3>
+            <p>
+              Counts below summarize the public description of the dataset and
+              are provided for browsing only.
+            </p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Group</th>
+                  <th>Total Posts</th>
+                  <th>STP</th>
+                  <th>HP</th>
+                  <th>Users / DRU</th>
+                  <th>IP Users</th>
+                </tr>
+              </thead>
+              <tbody id="composition-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="figures">
+        <div class="section-heading">
+          <p class="eyebrow">Figures</p>
+          <h2>Representative analysis results</h2>
+        </div>
+        <div class="gallery" id="figure-gallery"></div>
+      </section>
+
+      <section class="section muted" id="materials">
+        <div class="section-heading">
+          <p class="eyebrow">Materials</p>
+          <h2>Downloadable public materials</h2>
+          <p>
+            This repository includes the public figure bundle used by the
+            website, a PDF figure file, and a text backup of the page copy for
+            straightforward GitHub upload and maintenance.
+          </p>
+        </div>
+        <div class="two-column">
+          <div class="panel">
+            <h3>Dataset figure PDF</h3>
+            <p>
+              Download the PDF version of the figure provided for this website
+              package.
+            </p>
+            <p class="material-link">
+              <a href="materials/docs/MATCHA_dataset_figure.pdf" target="_blank"
+                >Open MATCHA_dataset_figure.pdf</a
+              >
+            </p>
+          </div>
+          <div class="panel">
+            <h3>Website text backup</h3>
+            <p>
+              A copy of the visible website text and structured content is
+              stored in the package for easy editing and future reuse.
+            </p>
+            <p class="material-link">
+              <a href="materials/text/site-copy.md" target="_blank"
+                >Open site-copy.md</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section muted" id="samples">
+        <div class="section-heading">
+          <p class="eyebrow">Samples</p>
+          <h2>Illustrative examples</h2>
+          <p>
+            To protect privacy and comply with the data use policy, this page
+            shows only short, translated illustrative examples adapted from the
+            annotation guideline. These examples are not a release of the full
+            dataset.
+          </p>
+        </div>
+        <div class="sample-grid" id="sample-grid"></div>
+      </section>
+
+      <section class="section" id="access">
+        <div class="section-heading">
+          <p class="eyebrow">Access</p>
+          <h2>Controlled release policy</h2>
+        </div>
+        <div class="access-box">
+          <p class="access-lead">
+            The complete dataset is not distributed through this GitHub Pages
+            website.
+          </p>
+          <ul class="policy-list">
+            <li>
+              Full dataset access requires a signed data use agreement and
+              review by the maintainers.
+            </li>
+            <li>
+              During the anonymity period, the full dataset is not available for
+              download or application through this page.
+            </li>
+            <li>
+              After the anonymity period ends, qualified academic users may
+              apply for access subject to the agreement and approval process.
+            </li>
+            <li>
+              Public materials on this site are limited to overview text,
+              summary statistics, derived figures, and non-sensitive examples.
+            </li>
+          </ul>
+        </div>
+        <div class="two-column">
+          <div class="panel">
+            <h3>Recommended application requirements</h3>
+            <ul class="feature-list">
+              <li>Research-only, non-commercial use</li>
+              <li>No re-identification or deanonymization attempts</li>
+              <li>No redistribution of released files to third parties</li>
+              <li>Compliance with platform terms and local ethics rules</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Placeholder contact block</h3>
+            <p>
+              Replace this paragraph after the anonymity period with your
+              institutional contact, application form, or project email.
+            </p>
+            <p class="inline-note">
+              Suggested wording: "Access requests will open after the anonymity
+              period. Please check back for the data use agreement and
+              application form."
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>MATCHA dataset website.</p>
+      <p>
+        This site publishes summary information only. It does not host the full
+        dataset.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
