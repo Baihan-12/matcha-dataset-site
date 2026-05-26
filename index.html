@@ -18,8 +18,7 @@
           <a href="#overview">Overview</a>
           <a href="#statistics">Statistics</a>
           <a href="#figures">Figures</a>
-          <a href="#materials">Materials</a>
-          <a href="#samples">Samples</a>
+          <a href="#classifier">Classifier</a>
           <a href="#access">Access</a>
         </div>
       </nav>
@@ -128,56 +127,39 @@
         <div class="gallery" id="figure-gallery"></div>
       </section>
 
-      <section class="section muted" id="materials">
+      <section class="section" id="classifier">
         <div class="section-heading">
-          <p class="eyebrow">Materials</p>
-          <h2>Downloadable public materials</h2>
+          <p class="eyebrow">Classifier</p>
+          <h2>Classifier showcase from annotated samples</h2>
           <p>
-            This repository includes the public figure bundle used by the
-            website, a PDF figure file, and a text backup of the page copy for
-            straightforward GitHub upload and maintenance.
+            The examples below are loaded from the packaged
+            <code>samples.json</code> file and illustrate how life-event and
+            symptom categories appear in real posts. The showcase is intended
+            for browsing only and does not expose the full dataset. On desktop,
+            the two columns scroll internally so you can browse all categories
+            without making the full page excessively long.
           </p>
         </div>
-        <div class="two-column">
-          <div class="panel">
-            <h3>Dataset figure PDF</h3>
-            <p>
-              Download the PDF version of the figure provided for this website
-              package.
-            </p>
-            <p class="material-link">
-              <a href="materials/docs/MATCHA_dataset_figure.pdf" target="_blank"
-                >Open MATCHA_dataset_figure.pdf</a
+        <div class="showcase-columns">
+          <div class="panel showcase-panel">
+            <div class="showcase-head">
+              <h3>Life-event samples</h3>
+              <a class="mini-link" href="materials/data/samples.json" target="_blank"
+                >Open JSON source</a
               >
-            </p>
+            </div>
+            <div class="showcase-grid" id="life-event-showcase"></div>
           </div>
-          <div class="panel">
-            <h3>Website text backup</h3>
-            <p>
-              A copy of the visible website text and structured content is
-              stored in the package for easy editing and future reuse.
-            </p>
-            <p class="material-link">
-              <a href="materials/text/site-copy.md" target="_blank"
-                >Open site-copy.md</a
+          <div class="panel showcase-panel">
+            <div class="showcase-head">
+              <h3>Symptom samples</h3>
+              <a class="mini-link" href="materials/data/samples.json" target="_blank"
+                >Open JSON source</a
               >
-            </p>
+            </div>
+            <div class="showcase-grid" id="symptom-showcase"></div>
           </div>
         </div>
-      </section>
-
-      <section class="section muted" id="samples">
-        <div class="section-heading">
-          <p class="eyebrow">Samples</p>
-          <h2>Illustrative examples</h2>
-          <p>
-            To protect privacy and comply with the data use policy, this page
-            shows only short, translated illustrative examples adapted from the
-            annotation guideline. These examples are not a release of the full
-            dataset.
-          </p>
-        </div>
-        <div class="sample-grid" id="sample-grid"></div>
       </section>
 
       <section class="section" id="access">

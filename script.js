@@ -35,6 +35,12 @@ const composition = [
 
 const figures = [
   {
+    title: "Dataset summary figure",
+    image: "assets/dataset-figure.png",
+    description:
+      "High-resolution summary figure of user distribution, user and post statistics, stratification, and overall dataset scope.",
+  },
+  {
     title: "Cross-platform differences",
     image: "assets/core18_cross_platform_differences.png",
     description:
@@ -57,32 +63,6 @@ const figures = [
     image: "assets/overview-new.png",
     description:
       "Overview of data collection, user grouping, de-identification, and annotation steps for MATCHA.",
-  },
-];
-
-const samples = [
-  {
-    tag: "Explicit evidence",
-    title: "Diagnosis-oriented example",
-    quote: '"Will this illness ever be cured?"',
-    note:
-      "Illustrative translated example used in the annotation guideline. It reflects explicit condition disclosure and is labeled positive.",
-  },
-  {
-    tag: "Medication and care",
-    title: "Treatment-oriented example",
-    quote:
-      '"I took my meds again today, and I hope the next hospital visit goes well."',
-    note:
-      "Illustrative translated example indicating medication use and treatment context in the annotation protocol.",
-  },
-  {
-    tag: "Non-positive example",
-    title: "Symptom-only example",
-    quote:
-      '"I have been having headaches and crying a lot recently. What should I do?"',
-    note:
-      "Illustrative translated example with symptoms but no explicit diagnosis or treatment confirmation, so it is not treated as an identified positive example.",
   },
 ];
 
@@ -125,24 +105,125 @@ function renderFigures() {
   });
 }
 
-function renderSamples() {
-  const grid = document.getElementById("sample-grid");
-  samples.forEach((item) => {
+function getIntroItems(labelIntro, fieldName) {
+  const items = labelIntro?.[fieldName] || [];
+  return items.slice(0, 3).map((item) => item.zh || item.en || item).filter(Boolean);
+}
+
+function normalizeKey(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function buildIntroMap(allLabels) {
+  return Object.fromEntries(
+    allLabels.map((item) => [normalizeKey(item.en), item.label_intro || {}]),
+  );
+}
+
+function renderShowcaseGroup({
+  containerId,
+  labels,
+  categories,
+  introMap,
+  introField,
+  badge,
+}) {
+  const container = document.getElementById(containerId);
+  container.innerHTML = "";
+
+  labels.forEach((key) => {
+    const category = categories[key];
+    if (!category) {
+      return;
+    }
+
+    const example = category.examples?.[0];
+    const introItems = getIntroItems(introMap[normalizeKey(category.label_en || key)], introField);
+    const labelEn = category.label_en || key;
+    const labelCn = category.label_cn || "";
+
     const card = document.createElement("article");
-    card.className = "sample-card";
+    card.className = "showcase-card";
     card.innerHTML = `
-      <div class="sample-card-body">
-        <span class="sample-tag">${item.tag}</span>
-        <h3>${item.title}</h3>
-        <p class="sample-quote">${item.quote}</p>
-        <p>${item.note}</p>
-      </div>
+      <span class="sample-tag">${badge}</span>
+      <h4>${labelEn}</h4>
+      <p class="showcase-label-cn">${labelCn}</p>
+      ${
+        introItems.length
+          ? `<p class="showcase-hint">${introItems.slice(0, 2).join(" / ")}</p>`
+          : ""
+      }
+      ${
+        example
+          ? `
+            <div class="showcase-example">
+              <div class="showcase-quote-card">
+                <p class="showcase-card-title">Original</p>
+                <p class="showcase-quote">${example.content}</p>
+              </div>
+              <div class="showcase-translation-card">
+                <p class="showcase-card-title">Translation</p>
+                <p class="showcase-translation">${example.content_en || ""}</p>
+              </div>
+            </div>
+          `
+          : `<p class="showcase-hint">No example available.</p>`
+      }
     `;
-    grid.appendChild(card);
+    container.appendChild(card);
   });
+}
+
+async function renderClassifierShowcase() {
+  const lifeEventContainer = document.getElementById("life-event-showcase");
+  const symptomContainer = document.getElementById("symptom-showcase");
+
+  try {
+    const response = await fetch("materials/data/samples.json");
+    if (!response.ok) {
+      throw new Error("Failed to load samples.json");
+    }
+
+    const data = await response.json();
+    const lifeEventIntroMap = buildIntroMap(data.life_events.all_labels);
+    const symptomIntroMap = buildIntroMap(data.symptoms.all_labels);
+    const lifeEventLabels = Object.keys(data.life_events.categories);
+    const symptomLabels = Object.keys(data.symptoms.categories);
+
+    renderShowcaseGroup({
+      containerId: "life-event-showcase",
+      labels: lifeEventLabels,
+      categories: data.life_events.categories,
+      introMap: lifeEventIntroMap,
+      introField: "subtypes",
+      badge: "Life Event",
+    });
+
+    renderShowcaseGroup({
+      containerId: "symptom-showcase",
+      labels: symptomLabels,
+      categories: data.symptoms.categories,
+      introMap: symptomIntroMap,
+      introField: "manifestations",
+      badge: "Symptom",
+    });
+  } catch (error) {
+    const fallback = `
+      <article class="showcase-card">
+        <span class="sample-tag">Unavailable</span>
+        <h4>Could not load classifier showcase</h4>
+        <p class="showcase-meta">Please make sure materials/data/samples.json is included in the repository.</p>
+      </article>
+    `;
+    lifeEventContainer.innerHTML = fallback;
+    symptomContainer.innerHTML = fallback;
+    console.error(error);
+  }
 }
 
 renderStats();
 renderComposition();
 renderFigures();
-renderSamples();
+renderClassifierShowcase();

@@ -32,6 +32,7 @@
 - Life-event distribution shift
 - Collection pipeline
 - Dataset figure PDF
+- Dataset figure PNG preview
 
 ## Sample Section
 
@@ -45,6 +46,18 @@
 - Symptom-only example
 - "I have been having headaches and crying a lot recently. What should I do?"
 
+## Classifier Showcase
+
+- Classifier showcase from annotated samples
+- Life-event samples loaded from `materials/data/samples.json`
+- Symptom samples loaded from `materials/data/samples.json`
+- Representative life-event labels shown on the page:
+- `Health`
+- `Relationship_Changes`
+- Representative symptom labels shown on the page:
+- `Anxious_Mood`
+- `sleep_disturbance`
+
 ## Access Policy
 
 - The complete dataset is not distributed through this GitHub Pages website.
@@ -56,6 +69,9 @@
 ## Included Public Assets
 
 - `materials/docs/MATCHA_dataset_figure.pdf`
+- `assets/MATCHA_dataset_figure.png`
+- `materials/images/MATCHA_dataset_figure.png`
+- `materials/data/samples.json`
 - `materials/images/overview-new.png`
 - `materials/images/core18_cross_platform_differences.png`
 - `materials/images/correlation_heatmaps_2x2.png`

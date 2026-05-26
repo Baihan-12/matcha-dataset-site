@@ -10,6 +10,8 @@
 - `assets/`: 网页直接引用的图片资源
 - `materials/images/`: 额外整理出的网页所用图片备份
 - `materials/docs/MATCHA_dataset_figure.pdf`: 你要求加入的 PDF 文件
+- `assets/MATCHA_dataset_figure.png`: 由 PDF 转换得到、网页直接展示的图片版本
+- `materials/data/samples.json`: classifier showcase 使用的样例数据
 - `materials/text/site-copy.md`: 网页文案备份，方便后续改文案
 
 ## 已包含的说明

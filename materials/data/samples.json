@@ -1,0 +1,2510 @@
+{
+    "source": "filtered_posts_retrain_merged_v2_scrub",
+    "life_events": {
+      "n_types_total": 12,
+      "all_labels": [
+        {
+          "en": "Bereavement",
+          "cn": "丧亲",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "death of spouse",
+                "zh": "配偶去世"
+              },
+              {
+                "en": "death of child",
+                "zh": "子女去世"
+              },
+              {
+                "en": "death of parent",
+                "zh": "父母去世"
+              },
+              {
+                "en": "death of pet",
+                "zh": "宠物去世"
+              },
+              {
+                "en": "death of a friend",
+                "zh": "朋友去世"
+              },
+              {
+                "en": "death of a loved one",
+                "zh": "亲人去世"
+              },
+              {
+                "en": "death of extended family member",
+                "zh": "大家族成员去世（旁系亲属）"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Education",
+          "cn": "教育",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "begin or end school/college",
+                "zh": "开始或结束学业"
+              },
+              {
+                "en": "change in school/college",
+                "zh": "学校/院校变动（转学等）"
+              },
+              {
+                "en": "left school (without graduating)",
+                "zh": "未毕业离校/退学"
+              },
+              {
+                "en": "denied entry into school",
+                "zh": "入学被拒"
+              },
+              {
+                "en": "obtained a certification",
+                "zh": "获得资格证书/认证"
+              },
+              {
+                "en": "Examination",
+                "zh": "考试/重大考试"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Family_Changes",
+          "cn": "家庭成员变化",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "gain of new family member",
+                "zh": "家庭新增成员"
+              },
+              {
+                "en": "gave birth / became a parent",
+                "zh": "分娩/成为父母"
+              },
+              {
+                "en": "adopted a child",
+                "zh": "收养孩子"
+              },
+              {
+                "en": "became a grandparent",
+                "zh": "成为祖父母/外祖父母"
+              },
+              {
+                "en": "became a great-grandparent",
+                "zh": "成为曾祖父母/曾外祖父母"
+              },
+              {
+                "en": "became an aunt/uncle",
+                "zh": "成为姑姨/叔伯舅等长辈"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Financial",
+          "cn": "财务",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "change in financial state",
+                "zh": "财务状况改变"
+              },
+              {
+                "en": "Loan",
+                "zh": "贷款"
+              },
+              {
+                "en": "home purchase",
+                "zh": "购房/买房"
+              },
+              {
+                "en": "car purchase",
+                "zh": "购车/买车"
+              },
+              {
+                "en": "other major purchase",
+                "zh": "其他重大购买"
+              },
+              {
+                "en": "home improvement",
+                "zh": "房屋装修/居家改善"
+              },
+              {
+                "en": "paid off debt",
+                "zh": "还清债务"
+              },
+              {
+                "en": "major financial difficulty",
+                "zh": "严重财务困难/重大经济压力"
+              },
+              {
+                "en": "major financial gain",
+                "zh": "重大财务收益/意外收入"
+              },
+              {
+                "en": "claimed bankruptcy",
+                "zh": "申请破产/破产申报"
+              },
+              {
+                "en": "Foreclosure",
+                "zh": "止赎/房屋被银行收回"
+              },
+              {
+                "en": "Mortgage",
+                "zh": "房贷/抵押贷款"
+              },
+              {
+                "en": "personal property damaged or stolen",
+                "zh": "个人财产损坏或被盗"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Health",
+          "cn": "健康",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "personal injury",
+                "zh": "个人受伤/事故/疾病"
+              },
+              {
+                "en": "got violently attacked (including sexual assault)",
+                "zh": "遭受暴力袭击（包括性侵犯）"
+              },
+              {
+                "en": "became disabled",
+                "zh": "致残/成为残障人士"
+              },
+              {
+                "en": "mental illenss",
+                "zh": "精神疾病/精神健康问题"
+              },
+              {
+                "en": "recovery from mental health struggles",
+                "zh": "精神健康困扰的恢复/康复过程"
+              },
+              {
+                "en": "major surgery",
+                "zh": "大型手术/重大手术"
+              },
+              {
+                "en": "Hospitalization",
+                "zh": "住院/住院治疗"
+              },
+              {
+                "en": "Pregnancy",
+                "zh": "怀孕/妊娠"
+              },
+              {
+                "en": "Pregnancy loss & Abortion",
+                "zh": "妊娠丢失/流产与人工流产"
+              },
+              {
+                "en": "Menopause",
+                "zh": "更年期/绝经期"
+              },
+              {
+                "en": "abuse (including sexual abuse)",
+                "zh": "遭受虐待（包括性虐待）"
+              },
+              {
+                "en": "began to self-harm",
+                "zh": "开始自伤"
+              },
+              {
+                "en": "suicide attempt",
+                "zh": "自杀企图/自杀未遂"
+              },
+              {
+                "en": "Substance Abuse and Addiction",
+                "zh": "物质滥用与成瘾"
+              },
+              {
+                "en": "recovery from addiction",
+                "zh": "成瘾恢复/戒断后恢复"
+              },
+              {
+                "en": "loss of healthcare",
+                "zh": "失去医疗保障/失去医疗服务可及性"
+              },
+              {
+                "en": "physical fitness milestone",
+                "zh": "身体健康/体能里程碑"
+              },
+              {
+                "en": "sex difficulties",
+                "zh": "性生活困难/性功能困扰"
+              },
+              {
+                "en": "change in health of family member",
+                "zh": "家庭成员健康状况改变"
+              },
+              {
+                "en": "taking medicine",
+                "zh": "服药/用药"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Identity",
+          "cn": "身份认同",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "identified sexual preference",
+                "zh": "确认性取向"
+              },
+              {
+                "en": "identified gender",
+                "zh": "确认性别认同"
+              },
+              {
+                "en": "came out as LGBTQ+",
+                "zh": "LGBTQ+出柜"
+              },
+              {
+                "en": "gender transition",
+                "zh": "性别过渡/性别转换"
+              },
+              {
+                "en": "change in political beliefs",
+                "zh": "政治信念改变"
+              },
+              {
+                "en": "change in religious/spiritual beliefs or practices",
+                "zh": "宗教/灵性信念或实践改变"
+              },
+              {
+                "en": "coming of age ceremony",
+                "zh": "成人礼/成年仪式"
+              },
+              {
+                "en": "new sexual experience",
+                "zh": "新的性体验"
+              },
+              {
+                "en": "another major identity shift",
+                "zh": "其他重大身份转变"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Legal",
+          "cn": "法律",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "got arrested",
+                "zh": "被逮捕/被拘捕"
+              },
+              {
+                "en": "lawsuit or legal action",
+                "zh": "诉讼或法律行动"
+              },
+              {
+                "en": "turned over power of attorney",
+                "zh": "移交授权委托书（委托代理权）"
+              },
+              {
+                "en": "loss of driver's license / DUI",
+                "zh": "吊销驾照/酒驾（DUI）"
+              },
+              {
+                "en": "went to jail or prison",
+                "zh": "入狱/被判监禁"
+              },
+              {
+                "en": "released from jail or prison",
+                "zh": "出狱/获释"
+              },
+              {
+                "en": "Minor violations of the law",
+                "zh": "轻微违法行为"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Lifestyle_Change",
+          "cn": "生活方式改变",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "change in physical habits",
+                "zh": "身体习惯改变（运动/饮食等）"
+              },
+              {
+                "en": "change in responsibilities in personal life",
+                "zh": "个人生活责任变化"
+              },
+              {
+                "en": "new pet",
+                "zh": "新增宠物/养新宠物"
+              },
+              {
+                "en": "joined the military",
+                "zh": "参军/入伍"
+              },
+              {
+                "en": "returned to civilian life after military",
+                "zh": "退伍/回归平民生活"
+              },
+              {
+                "en": "change in living conditions",
+                "zh": "居住条件变化"
+              },
+              {
+                "en": "revision of personal habits",
+                "zh": "调整个人习惯"
+              },
+              {
+                "en": "change in recreation",
+                "zh": "休闲方式改变"
+              },
+              {
+                "en": "change in social activities",
+                "zh": "社交活动改变"
+              },
+              {
+                "en": "vacation",
+                "zh": "度假/旅行休假"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Occupation",
+          "cn": "职业",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "started a new job",
+                "zh": "开始新工作"
+              },
+              {
+                "en": "change in responsibilities at work",
+                "zh": "工作职责变化"
+              },
+              {
+                "en": "change to a different line of work",
+                "zh": "转行/更换行业"
+              },
+              {
+                "en": "change in work hours or conditions",
+                "zh": "工作时间或工作条件变化"
+              },
+              {
+                "en": "business readjustment",
+                "zh": "业务调整/经营调整"
+              },
+              {
+                "en": "Promotion",
+                "zh": "升职/晋升"
+              },
+              {
+                "en": "Demotion",
+                "zh": "降职"
+              },
+              {
+                "en": "significant success at work",
+                "zh": "工作重大成就/显著成功"
+              },
+              {
+                "en": "troubles at work",
+                "zh": "工作困难/职场问题"
+              },
+              {
+                "en": "workplace discrimination or harassment",
+                "zh": "职场歧视或骚扰"
+              },
+              {
+                "en": "voluntary job loss (e.g., quit)",
+                "zh": "主动离职（如辞职）"
+              },
+              {
+                "en": "involuntary job loss (e.g., fired)",
+                "zh": "被动失业（如被解雇）"
+              },
+              {
+                "en": "became a business owner / entrepreneur",
+                "zh": "成为企业主/创业"
+              },
+              {
+                "en": "Retirement",
+                "zh": "退休"
+              },
+              {
+                "en": "unable to find work",
+                "zh": "无法找到工作/失业求职困难"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Relationship_Changes",
+          "cn": "关系变更",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "began serious romantic relationship",
+                "zh": "开始一段严肃恋爱关系"
+              },
+              {
+                "en": "ended serious romantic relationship",
+                "zh": "结束一段严肃恋爱关系"
+              },
+              {
+                "en": "Engagement",
+                "zh": "订婚"
+              },
+              {
+                "en": "ended engagement",
+                "zh": "解除婚约/取消订婚"
+              },
+              {
+                "en": "Marriage",
+                "zh": "结婚/婚姻"
+              },
+              {
+                "en": "Divorce",
+                "zh": "离婚"
+              },
+              {
+                "en": "marital separation",
+                "zh": "婚姻分居"
+              },
+              {
+                "en": "marital reconciliation",
+                "zh": "夫妻复合/婚姻修复"
+              },
+              {
+                "en": "relationship became abusive",
+                "zh": "关系变得具有虐待性/出现伴侣虐待"
+              },
+              {
+                "en": "serious argument with neighbor or friend",
+                "zh": "与邻居或朋友发生严重争吵"
+              },
+              {
+                "en": "change in number of arguments",
+                "zh": "争吵次数明显改变"
+              },
+              {
+                "en": "serious argument with family member or relative",
+                "zh": "与家庭成员或亲属发生严重争吵"
+              },
+              {
+                "en": "trouble with in-laws",
+                "zh": "与姻亲关系紧张（婆媳/岳婿等）"
+              },
+              {
+                "en": "family betrayal",
+                "zh": "家庭背叛/亲属背叛"
+              },
+              {
+                "en": "parenting difficulties",
+                "zh": "养育困难/育儿压力"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Relocation",
+          "cn": "搬迁",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "move within same town/city",
+                "zh": "在同一城镇/城市内搬家"
+              },
+              {
+                "en": "move to a different town/city",
+                "zh": "搬到其他城镇/城市"
+              },
+              {
+                "en": "move to a different state",
+                "zh": "搬到其他州/省"
+              },
+              {
+                "en": "move to a different country",
+                "zh": "移居到其他国家"
+              },
+              {
+                "en": "move to a different country as a refugee",
+                "zh": "以难民身份迁往他国"
+              },
+              {
+                "en": "became a permanent resident or citizen of a new country",
+                "zh": "获得新国家永久居留权或公民身份"
+              },
+              {
+                "en": "move out of parent's home",
+                "zh": "搬离父母家/离开原生家庭住所"
+              },
+              {
+                "en": "move in with family",
+                "zh": "搬去与家人同住"
+              },
+              {
+                "en": "family member moved into household",
+                "zh": "家庭成员搬入同住"
+              },
+              {
+                "en": "family member moved out of household",
+                "zh": "家庭成员搬出同住"
+              },
+              {
+                "en": "moved into assisted living",
+                "zh": "入住辅助生活设施/养老照护机构"
+              },
+              {
+                "en": "lost home / became homeless",
+                "zh": "失去住所/无家可归"
+              }
+            ]
+          }
+        },
+        {
+          "en": "Societal",
+          "cn": "社会事件",
+          "label_intro": {
+            "subtypes": [
+              {
+                "en": "natural disaster",
+                "zh": "自然灾害"
+              },
+              {
+                "en": "Pandemic",
+                "zh": "大流行（疫情）"
+              },
+              {
+                "en": "War",
+                "zh": "战争"
+              },
+              {
+                "en": "major political event that had personal impact",
+                "zh": "对个人产生重大影响的政治事件"
+              },
+              {
+                "en": "met a celebrity",
+                "zh": "遇到名人/见到名人"
+              }
+            ]
+          }
+        }
+      ],
+      "categories": {
+        "Bereavement": {
+          "n_posts_in_dataset": 4935,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4621778363614266",
+              "content": "就在昨天，我这个世界上最在乎的人，我的姥爷，突然去世了。我人都傻了，感觉就像做梦一样。我晚上一个人出去，一边走一边哭，眼泪鼻涕混成一块儿，顺着脸往下流，哭累了就蹲着哭。我真的太心痛了。",
+              "score": 1.0,
+              "content_en": "Just yesterday, the person I care about most in this world, my grandfather, passed away suddenly. I was completely stunned, like I was dreaming. I went out alone at night, crying as I walked, my tears and snot mixing together, running down my face. I cried until I was exhausted, then just sat down and cried. I really hurt so much."
+            },
+            {
+              "post_id": "4519823750546341",
+              "content": "亲爱的奶奶。您走了一年了，爷爷也跟着您走了那么久。 我好久没有梦见你俩了。啥时候有空了给我托个梦。我实在太想你俩了。 我想你们。爷，桐桐又问我老姥爷去哪了。我总是骗她说你去医院了。我不想告诉她（死亡）这个词。她每一天都在等你回家。可是再也不会了！你们在另一个人世界好好的，下辈子见！",
+              "score": 1.0,
+              "content_en": "Dear Grandma, you've been gone for a year now, and Grandpa has been waiting for you for so long. I haven't dreamed about you both for a long time. When you have time, come visit me in a dream. I miss you both so much. I miss you. Dad,桐桐 keeps asking where Grandpa went. I always lie and tell her he went to the hospital. I don't want to tell her the word (death). Every day she waits for you to come home. But it will never happen again! You are both doing well in the other world. We'll meet again in the next life!"
+            },
+            {
+              "post_id": "4948552515322514",
+              "content": "暑假散步时，和我爸聊到，我一个姐夫，去年因为意外失去了父亲，今年又痛失母亲，心里真的替他难受，我给他讲，如果换作是我，怕是都活不下去了，他只给我说，没有谁能一直陪谁，就算是父母也不行，人总是要向前看的，我爸这个年纪也是无父无母的小孩，希望我们一家子都健健康康的要活到好久才行。",
+              "score": 1.0,
+              "content_en": "I was walking during the summer vacation and talked with my dad about my brother-in-law. Last year he lost his father in an accident, and this year he lost his mother too. I really felt bad for him. I told him if it were me, I might not be able to go on. He just said, no one can be there for you forever, not even parents. People have to look forward. My dad was an orphan himself when he was my age. He hopes we all stay healthy and live a long time."
+            }
+          ],
+          "label_en": "Bereavement",
+          "label_cn": "丧亲"
+        },
+        "Education": {
+          "n_posts_in_dataset": 42542,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4698819986718864",
+              "content": "这一年其实就像是人生一世的缩影。从这一年的开始到这一年的结束，像极了你的生命从第一声啼哭到最后一秒停息。看似放弃一次考试，焉知这不也就等同于你在人生终点到来之前便在生活中对于自我的放弃。有人说，这个考试不参加也并不等于人生空白啊，我做别的也挺好的啊。这只是，人各有志，无关对错。",
+              "score": 1.0,
+              "content_en": "This year is actually like a microcosm of a lifetime. From the beginning of the year to its end, it's just like your life from the first cry at birth to the last second of your existence. Seems like giving up on one exam, but who knows if that's not equivalent to giving up on yourself in life before your final moment arrives. Some people say, \"Not taking this exam doesn't mean your life is blank, I can do other things too.\" But this is just, everyone has their own path, no right or wrong."
+            },
+            {
+              "post_id": "5005373427680334",
+              "content": "我曾经的学校，福建省莆田第十一中学，到现在还迟迟没有我是否可以重新参加中考的明确回复，仅仅因为我生病担心我死在他们那，休学那年快办好的时候才说已经把我按毕业处理，就像处理垃圾一样。还是跑了很多地方到处说才休学好。",
+              "score": 0.9999,
+              "content_en": "My former school, Putian No. 11 Middle School in Fujian Province, still hasn't given me a clear response on whether I can retake the中考, just because I got sick and they were worried I'd die there. They only said they had already processed me as graduated right before the休学 was about to be finalized, like treating me like trash. I had to run around everywhere and tell people before they finally allowed me to take a leave of absence."
+            },
+            {
+              "post_id": "4559743706467156",
+              "content": "想问休学的朋友一个问题 我现在休学差不多一个学期 马上要复学了 可是我又严重了 我真的很害怕回去 可是一直不回去我的学历怎么办 本来就只考了大专 想问问能不能在家自学完成学业 如果可以最后出来的学历会跟普通大专有什么不同吗…？",
+              "score": 0.9999,
+              "content_en": "i want to ask a friend who's on leave of absence a question. i've been on leave for almost a semester and am about to go back to school, but i've gotten really worse. i'm really scared to go back. but if i don't go back, what happens to my degree? i only got into a vocational college to begin with. i'm wondering if it's possible to study at home and finish my degree. if it is, will the final degree be any different from a regular vocational college one?"
+            }
+          ],
+          "label_en": "Education",
+          "label_cn": "教育"
+        },
+        "Family_Changes": {
+          "n_posts_in_dataset": 7975,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4712450467043668",
+              "content": "最近两个认识超过六年的朋友怀孕了，还有一个稻田的大学同学也怀孕了，一时间有种全世界都在生熊孩子的错觉，最开心的是马上我就有别人家的熊孩子可以玩啦，反正决定只养毛孩子，这样最好。",
+              "score": 0.9999,
+              "content_en": "Recently, two friends I've known for over six years got pregnant, and even my college classmate from the rice field campus got pregnant too. All of a sudden, it felt like the whole world was having baby bears. The best part is that I'll soon have someone else's baby bear to play with. I guess I'll just raise pets instead, that's the best choice."
+            },
+            {
+              "post_id": "5113357521125758",
+              "content": "我可不是这么认为的，我生孩子不是为了她给我养老，养老靠自己，孩子识相点，尽快独立出去。最好也别让我给孩子带孩子，我可以支援一点保姆费。大家有空就走动走动，可以一起聊聊 最近妈妈又换了哪个男朋友。在不能自理前，我自我了断得了。这辈子不白活就足够了。",
+              "score": 0.9995,
+              "content_en": "i don't think like that, i had the kid not to have her take care of me when i get old, old age is something you have to deal with yourself. the kid should be sensible and get independent as soon as possible. also, please don't make me take care of your kid, i can just give you some money for a nanny. when you have time, come visit, we can chat about which boyfriend mom is dating these days. before i can't take care of myself, i'll end it all. just living this life well enough is enough."
+            },
+            {
+              "post_id": "4850291830166547",
+              "content": "笑不行了。我跟朋友们都很喜欢长得漂亮的小孩子，但是她们都不想生，并且催促我生一个好看的她们拿着玩。仿佛已经看到我屋里坐一群女人逗小孩玩的场景，娃出生可以说是吃喝不愁了。下一个主线任务：找个帅哥结婚生孩子。",
+              "score": 0.9994,
+              "content_en": "I couldn't stop laughing. My friends and I all really like cute little kids, but they don't want to have kids themselves and are actually pushing me to have a beautiful one to play with. It's like I already see a bunch of women sitting in my house playing with the kid. Having a baby means no worries about food or money. Next main mission: find a handsome guy to get married and have a kid."
+            }
+          ],
+          "label_en": "Family_Changes",
+          "label_cn": "家庭成员变化"
+        },
+        "Financial": {
+          "n_posts_in_dataset": 23242,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4617193586952169",
+              "content": "天呐，原来爸爸给我那么多钱，是想把一整年的房租钱都给我。其实我只是因为买了考研书，修了电动车，加上房租加了一个月押金，这个月才破产的，只是想要五百块再充个饭卡…他说，花钱没关系，安全就好我真的有全世界最好的爸爸，只是我一直配不上做他的女儿罢了。",
+              "score": 1.0,
+              "content_en": "Wow, I never realized my dad gave me so much money, it was basically a whole year's rent. I just bought some postgraduate study books, fixed my electric scooter, and added a month's deposit for rent, and that's how I went bankrupt this month. All I wanted was 500 yuan to recharge my meal card... He said it's okay to spend money, as long as I'm safe. I really have the best dad in the world, but I've always felt I'm not worthy of being his daughter."
+            },
+            {
+              "post_id": "5062250327180855",
+              "content": "真的很无奈啊，家真没钱，有爱面子不同意我办助学贷，说出去不好听。本来想按天给生活费，不信邪出去问了一圈朋友，人家最少给孩子一千五。于是好面子，咬咬牙一个月给我一千五都这样了还不同意助学贷，你们痛苦我也痛苦怎么也说不通。",
+              "score": 0.9998,
+              "content_en": "I'm really helpless. Our family really doesn't have money. They don't agree to me applying for a student loan because they're too concerned about face, saying it's not good to talk about it. I originally wanted to give me a daily allowance, but I went around asking my friends and they all said the minimum is 1500. So, because of face, I reluctantly gave me 1500 a month, but they still don't agree to the student loan. We both suffer, but no matter how I try to explain, they just won't listen."
+            },
+            {
+              "post_id": "4563442641928655",
+              "content": "为什么会这样呢？为什么偏偏是我呢？从小就被迫压抑自己的欲望，精神上的物质上的，谁能想象会真的有人家没钱呢？会有父母宁愿在家坐吃等死也不挣钱呢？我从不指望说要靠父母买房买车，为什么会欠几十万外债呢？为什么会把家庭经营成这样？家不应该是避风港吗？",
+              "score": 0.9995,
+              "content_en": "Why does this happen? Why me? Since childhood, I've been forced to suppress my desires, both spiritual and material. Who can imagine that someone could really be poor? That parents would rather sit at home waiting to die than work? I never expected to rely on my parents for buying a house or a car. Why do I have tens of thousands of debt? Why did the family end up in this situation? Shouldn't the family be a safe haven?"
+            }
+          ],
+          "label_en": "Financial",
+          "label_cn": "财务"
+        },
+        "Health": {
+          "n_posts_in_dataset": 344298,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4912141234867563",
+              "content": "前几天胃酸胃痛胃胀，我开始喝抗焦虑的药，喝了三周 这两天胃好很多，我只喝乌灵胶囊和疏肝解郁胶囊，从一开始确诊就这样，所以胃难受的还是要抗焦虑治疗。",
+              "score": 0.998,
+              "content_en": "A few days ago I had stomach acid, stomach pain, and bloating, so I started taking anti-anxiety medication. I took it for three weeks, and these past two days my stomach has improved a lot. Now I only take Wuling Capsules and Shugan Jieyu Capsules. It's been this way since I was diagnosed, so when my stomach feels uncomfortable, I still need anti-anxiety treatment."
+            },
+            {
+              "post_id": "4670761975417268",
+              "content": "情人节那天被朋友拉着去医院检查了，医生说是复发性抑郁障碍 ，焦虑和抑郁都是重度的 其实本身活不活着，对我好像没有太大意义了，每天都想着什么时候可以死掉。",
+              "score": 0.9979,
+              "content_en": "I was dragged by my friends to the hospital for a check-up on Valentine's Day, and the doctor said I have recurrent depressive disorder, with severe anxiety and depression. Honestly, living or not living doesn't really matter to me anymore. Every day I just think about when I can die."
+            },
+            {
+              "post_id": "4915944021824600",
+              "content": "真的就是，我没有吃药，但是胃口一天不如一天，每天都在干呕，吃的一天比一天少，我能感觉到身体在变的很虚弱，没有力气，情绪崩溃的时候哭不出来，一点都哭不出来，没有一滴眼泪，我发泄不了。。心慌手抖厌食，我真的受够了。。",
+              "score": 0.9977,
+              "content_en": "I really just don't take any medication, but my appetite is getting worse day by day. I'm constantly nauseous, eating less and less every day. I can feel my body getting weaker, I don't have any energy. When I break down emotionally, I can't cry at all, not a single tear. I can't release my feelings. I get heart palpitations, shaky hands, and anorexia. I'm really fed up with this."
+            }
+          ],
+          "label_en": "Health",
+          "label_cn": "健康"
+        },
+        "Identity": {
+          "n_posts_in_dataset": 4230,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4451639693509932",
+              "content": "非同，但是这件事绝对支持，为什么要剥夺人们寻找真爱的权利呢？喜欢就是喜欢，性别有那么重要吗？为什么要歧视？！你可以不支持，但我不要剥夺别人追求爱的自由，让他们牵手走在阳光下不好吗？！",
+              "score": 0.9999,
+              "content_en": "Not the same, but I absolutely support this. Why take away people's right to seek true love? Like is like, why is gender so important? Why discriminate? You can choose not to support, but I don't want to take away others' freedom to pursue love. Let them hold hands and walk under the sunshine, isn't that nice?！"
+            },
+            {
+              "post_id": "4497608644571166",
+              "content": "我问过身边的人，你觉得同性恋怎么样？都会说还好，我尊重他们。如果我是同性恋呢？emmmm大多会犹豫。害，尊重同性恋如果只是尊重没在自己生活周围出现的同性恋，那是真没意思。我尊重所有出现在我身边或者在世界每个角落的同志，蟹蟹。",
+              "score": 0.9994,
+              "content_en": "I asked the people around me what they think about being gay. They all said it's okay, and they respect them. But what if I were gay? Emmm, most of them would hesitate. Ugh, respecting gay people just because they aren't in my life or in my surroundings is really boring. I respect all the LGBTQ+ people who are in my life or in every corner of the world. Thank you."
+            },
+            {
+              "post_id": "4608544475710388",
+              "content": "我不是同，但是我觉得同不是心理障碍，只是爱的是同性而已，有的是双性，爱的只是那个人而已。只要不伤害别人，他们都是正常人啊。",
+              "score": 0.9989,
+              "content_en": "I'm not gay, but I think being gay isn't a mental illness, it's just loving someone of the same gender. Some are bisexual, they just love that person. As long as they don't hurt others, they're normal people."
+            }
+          ],
+          "label_en": "Identity",
+          "label_cn": "身份认同"
+        },
+        "Legal": {
+          "n_posts_in_dataset": 7717,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4365387262963967",
+              "content": "素媛案元凶长相首次公开 没有必要保护这种人，他不应该拥有公民的权利，不应该拥有人权，我认为性侵儿童是比杀人更恶劣的犯罪，应该受到最严重的惩戒，我觉得法律还是对他太宽容了.... 素媛案罪犯长相首次公开，你支持吗？法律有无必要保护性侵者肖像权？",
+              "score": 0.9997,
+              "content_en": "The perpetrator of the Sooyeon case was finally revealed. There's no need to protect someone like this, he shouldn't have the rights of a citizen, he shouldn't have human rights. I think child sexual abuse is a worse crime than murder, and should be punished the most severely. I think the law is still too lenient towards him... The perpetrator of the Sooyeon case was finally revealed, do you support this? Should the law protect the right to the image of a sexual offender?"
+            },
+            {
+              "post_id": "4803263708266845",
+              "content": "我觉得有黒不仅仅是法盲，还不懂理解，说什么肖战方是谁，肖战是律师吗？我真的笑了怎么会有人问出这么的问题。",
+              "score": 0.9987,
+              "content_en": "i think being black isn't just about being law blind, you don't even understand, what's the point of asking who the shao zhanfang is, is shao zhan a lawyer? i really laughed, how could someone ask such a question."
+            },
+            {
+              "post_id": "5047739450659601",
+              "content": "删自己下的软件就被威胁起诉，怎么看都离谱。。。。而且删掉也是保护自己隐私的一种我感觉（我不懂电脑别骂我，公司如果在意的是工作相关资料，要交给其他对接人接手，的确最好不要随意删除。可是像社交、听歌这些软件一般不涉及，反倒是个人隐私，删掉怎么了。。",
+              "score": 0.998,
+              "content_en": "Delete the apps I downloaded and got threatened with legal action, it all looks ridiculous. Also, deleting them is a way to protect my privacy, I think. (I don't know much about computers, don't hate me. If the company cares about work-related data, they should hand it over to other contacts, so it's better not to delete them randomly. But apps like social media and music players usually don't involve that. It's actually personal privacy, so what's the problem with deleting them?)"
+            }
+          ],
+          "label_en": "Legal",
+          "label_cn": "法律"
+        },
+        "Lifestyle_Change": {
+          "n_posts_in_dataset": 33483,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5115707467497705",
+              "content": "假期也不忘锻炼，瑜伽、普拉提日常不断。运动是我的日常，健身是我的生活方式。坚持自律，美好终将到来。即使不露脸拍照，也要记录下这份坚持与美好。",
+              "score": 0.9983,
+              "content_en": "I don't forget to exercise even during holidays, doing yoga and Pilates every day. Exercise is my routine, fitness is my lifestyle. Stay disciplined and keep going, and beauty will come. Even if I don't take photos, I still record this persistence and beauty."
+            },
+            {
+              "post_id": "5112585822670719",
+              "content": "健身 今天练背！运动打卡啦！中午健身房人很少，固定的那几个人，今天人更少了。昨天听到另外两个人说有事，今天都不能来练，所以今天加上我就4个人！人少的健身房好舒服，练得尽兴，拍视频拍照片也尽兴，不会尴尬！拿着省凳走来走去拍视频！",
+              "score": 0.9952,
+              "content_en": "Gym today! Working out my back! Fitness check-in! There weren't many people in the gym at noon, just the usual few, but today even fewer. Yesterday I heard that two others had something going on, so today we're only four people including me. A quiet gym is so comfortable, I could really get into my workout, and taking videos and photos was fun too, no awkwardness at all! Walking around with the bench, taking videos!"
+            },
+            {
+              "post_id": "4873906131568421",
+              "content": "明天开始开启减肥模式啦，我爱我自己，我也要做更好更美的我自己！加油加油加油！！！",
+              "score": 0.9942,
+              "content_en": "Starting tomorrow, I'm going into weight loss mode! I love myself, and I want to be a better and more beautiful version of myself! Let's go! Let's go! Let's go!!!"
+            }
+          ],
+          "label_en": "Lifestyle_Change",
+          "label_cn": "生活方式改变"
+        },
+        "Occupation": {
+          "n_posts_in_dataset": 24995,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5088856427463494",
+              "content": "居然有这种先例 我秒秒钟想辞职 我日渐知道这不是我想长久过下去的生活。 我有的同事是真的享受社交以及帮助别人走向更好的职业生涯。而我本身不觉得从A家到F家到G家这样的switch 是更好的人生。 时至今日，我还是只想做口译，不论在什么样的场景下。 已经在天花板的好处是，不会在有什么上班的执念。",
+              "score": 1.0,
+              "content_en": "There's actually a precedent like this, and I'm instantly thinking about quitting. I'm slowly realizing this isn't the life I want to live long-term. Some of my colleagues genuinely enjoy socializing and helping others advance in their careers. But I don't feel that moving from A company to F company to G company is a better life. Even now, I still just want to do interpretation, no matter the setting. The advantage of being at the ceiling is that I no longer have any attachment to working."
+            },
+            {
+              "post_id": "4597724231773259",
+              "content": "各位朋友，你们会有找工作的焦虑感吗？我失业3年多了（被上级逼迫离职的，情绪病大复发），家里经济也不好。这两天有一份薪酬不高，工作量也相对少的，我该去做吗？只要薪酬期待偏差有点差距。我都不知道怎么选择，很困扰。",
+              "score": 1.0,
+              "content_en": "Hey everyone, do you ever feel anxious about finding a job? I've been unemployed for over three years now, forced to quit by my boss, and I had a major relapse of my mood disorder. My family's financial situation isn't great either. Recently, I got an offer for a job that pays not much but has a lighter workload. Should I take it? There's just a slight gap between what I expected and what's offered. I don't know what to choose, and I'm really confused."
+            },
+            {
+              "post_id": "5070505440972840",
+              "content": "上班半天，教了我一上午要怎么做，但是我到现在谁叫啥都不知道社交不了一点，唯独跟三个人沟通，一个老板一个人事一个教我怎么做的人。其实工作不难，而且能学到一点东西，但是是太久没有工作的原因还是什么，我总是想回家，可能适应两天就好了。",
+              "score": 1.0,
+              "content_en": "Worked half a day, taught me all morning how to do things, but I still don't know what anyone is saying, can't socialize at all. The only people I communicate with are the boss, the HR person, and the one who taught me. Actually, the job isn't that hard, and I can learn a little something. But maybe it's because I haven't worked for too long, or something else, I always want to go home. Maybe I'll get used to it in two days."
+            }
+          ],
+          "label_en": "Occupation",
+          "label_cn": "职业"
+        },
+        "Relationship_Changes": {
+          "n_posts_in_dataset": 50344,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4350291346252669",
+              "content": "很奇怪我的母亲还会跟我讨论找对象婚姻的话题，从小活在动不动吵架打架的家庭下，我对家庭有什么好念想的？？而且我不觉得我能迁就对方，我甚至觉得自己越来越像我爸那样独裁，我就是讨厌家庭，我不喜欢我们三个聚在一起，三个人像现在各过个的应该是最好的生活方式了。",
+              "score": 0.999,
+              "content_en": "It's weird my mom still talks to me about finding a partner and marriage. Growing up in a family where arguments and fights were constant, what do I have to look forward to in a family? I don't think I can compromise with someone else. In fact, I feel like I'm becoming more like my dad, being authoritarian. I just hate family, I don't like being with all three of us together. I think living separately as three individuals is the best way to go."
+            },
+            {
+              "post_id": "4337199900147999",
+              "content": "老爸一朋友摔断了腿，爸妈一起去看望。一番寒暄爸妈起身离开，病床上的那位不知怎么的突然提到我，随口一问我有没对象，爸妈如实回答没有。于是就介绍了我老婆给我认识，一来二去就在一起了，非常的顺利，一直到结婚了我都感觉到很懵逼。",
+              "score": 0.9988,
+              "content_en": "My dad's friend broke his leg, and my parents went to visit him. After some small talk, my parents got up to leave, and the patient somehow suddenly mentioned me. He casually asked if I had a girlfriend, and my parents honestly said no. Then he introduced me to his daughter, and we started getting along really well, and eventually got married. I was still in shock all the way through the marriage."
+            },
+            {
+              "post_id": "4788721272754323",
+              "content": "结婚要面对的是一个家庭，而不是一个人。所以，即使那个人再好，他的家庭有不明事理的父母照样没用。别说什么过日子是两个人，其实就是两个家庭。所以我很感谢我妈一直认同我如果遇不到好的自己快乐过一辈子也可以的想法。",
+              "score": 0.998,
+              "content_en": "Getting married means facing a whole family, not just one person. So even if that person is great, their parents who don't understand things can still make it hard. Don't say it's just two people living together—it's actually two families. So I really appreciate my mom always supporting my idea that if I can't find someone good, I can still be happy living my own life."
+            }
+          ],
+          "label_en": "Relationship_Changes",
+          "label_cn": "关系变更"
+        },
+        "Relocation": {
+          "n_posts_in_dataset": 22793,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5104866277982654",
+              "content": "今年经历了很多次搬家，住过Airbnb也住过朋友家，可能这就是一个人出门在外的代价吧:(",
+              "score": 1.0,
+              "content_en": "This year I've moved several times, stayed in Airbnb and also at friends' places. Maybe this is just the cost of being away from home alone :("
+            },
+            {
+              "post_id": "4435610443479252",
+              "content": "我现在是大三，等着大四毕业，回到老家，找一个没人的地方……想了想还是不回老家了吧，去拉萨或者张家界，感觉那里风景挺好的， 地方也挺广阔的，到时候找个人迹罕至的地方，尽量不给大家添麻烦",
+              "score": 1.0,
+              "content_en": "i'm a junior now, waiting for my senior year to graduate, then go back to my hometown, find a place where no one is... but after thinking about it, maybe i shouldn't go back to my hometown. maybe go to lhasa or zhangjiajie instead, the scenery there is pretty good, the place is also vast. then find a remote area, try to not bother anyone."
+            },
+            {
+              "post_id": "4658632471871490",
+              "content": "我打算离开爸妈出去一个人住，去一个陌生的城市找工作，大学我也不想去了，就这样吧，以后是好是坏都不会比现在更难受了。问问兄弟姐妹们有什么在一个人也不认识的城市找工作房子的经验，防止受骗〈猥琐男勿扰，佛教退散〉",
+              "score": 0.9999,
+              "content_en": "i'm planning to leave my parents and live alone in a new city, looking for a job. i don't even want to go to university anymore, that's it. whatever happens in the future won't be worse than what i'm going through now. guys, anyone who has experience finding a place to live and a job in a city where you don't know anyone, please share your tips to avoid being scammed. <no creepy guys, buddhist retreat>"
+            }
+          ],
+          "label_en": "Relocation",
+          "label_cn": "搬迁"
+        },
+        "Societal": {
+          "n_posts_in_dataset": 34955,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4746498556035831",
+              "content": "所以出了事压下去就是最傻逼的事情。何况是疫情。怕担责的结果就是承担几千倍的责任。害了多少人看看啊？19年底疫情刚开始武汉政府就是这样，现在疫情发生2年多了吉林政府还是这样。一直是我觉得最最最恶心的事情。",
+              "score": 0.9998,
+              "content_en": "So covering up problems is the biggest idiot thing to do. Especially during the pandemic. The result of fearing responsibility is taking on thousands times more responsibility. How many people have been harmed? Look at how Wuhan's government handled it at the end of 2019 when the pandemic first started. Now, two years later, the Jilin government is still doing the same thing. This has always been the most disgusting thing I can think of."
+            },
+            {
+              "post_id": "4812817805608130",
+              "content": "真的感觉我们好冤啊，在别的省有疫情的时候，我们大把大把的蔬菜往外运，咱济宁虽说是个地级市，但是蔬菜，除了寿光。我们应该是不少。现在呢，我们有了疫情很严重，我们发声，政府压热搜外省根本不知道。看看济宁吧！",
+              "score": 0.9998,
+              "content_en": "We really feel so wronged. When other provinces had outbreaks, we sent tons of vegetables out. Jinan, though a prefecture-level city, has a lot of vegetables, except for Shouguang. We should have enough. Now, we have a serious outbreak, but when we speak out, the government suppresses the热搜, and people outside the province don't even know. Look at Jining!"
+            },
+            {
+              "post_id": "4468985515220557",
+              "content": "我曾经是挺正能量的一人，也对我们的国家充满希望，但是在这次“灾难”面前，我突然觉得不那么安稳了。太多的不确定性，还有指数增长的确诊病例。虽然好人们都在竭尽全力的遏制这场灾难，但是杯水车薪。永远也想不明白国家掏钱给你看病你还想着躲着逃避是什么心理状态。“人权”不适合中国人。",
+              "score": 0.9997,
+              "content_en": "I used to be a pretty positive person, full of hope for our country, but in the face of this \"disaster,\" I suddenly feel less secure. There's so much uncertainty, and the exponential growth of confirmed cases. Although good people are doing their best to contain this disaster, it's like putting out a fire with a cup of water. I can't understand the mindset of someone who, when the country is paying for your medical care, still wants to hide and avoid it. \"Human rights\" don't fit for Chinese people."
+            }
+          ],
+          "label_en": "Societal",
+          "label_cn": "社会事件"
+        }
+      },
+      "label_map": {
+        "Bereavement": "丧亲",
+        "Education": "教育",
+        "Family_Changes": "家庭成员变化",
+        "Financial": "财务",
+        "Health": "健康",
+        "Identity": "身份认同",
+        "Legal": "法律",
+        "Lifestyle_Change": "生活方式改变",
+        "Occupation": "职业",
+        "Relationship_Changes": "关系变更",
+        "Relocation": "搬迁",
+        "Societal": "社会事件"
+      }
+    },
+    "symptoms": {
+      "n_types_total": 38,
+      "all_labels": [
+        {
+          "en": "Anger_Irritability",
+          "cn": "易激惹心境",
+          "label_intro": {
+            "manifestations": [
+              "想起创伤事件时感到情绪痛苦",
+              "感到易激惹或有愤怒发作",
+              "易激惹的行为和暴怒发作",
+              "易激惹性增高",
+              "针对人或物的言语或肢体攻击"
+            ]
+          }
+        },
+        {
+          "en": "Anxious_Mood",
+          "cn": "焦虑心境",
+          "label_intro": {
+            "manifestations": [
+              "对多种事件或活动表现出过度的焦虑和担忧",
+              "持续担心会有更多的惊恐发作或其后果（如失控、心脏病发作、“发疯”）",
+              "针对轻微躯体症状或药物副作用，预期会出现灾难性后果",
+              "体验到明显的焦虑，其中可能包括反复的惊恐发作",
+              "对创伤事件的恐惧",
+              "对常规生活琐事的担忧"
+            ]
+          }
+        },
+        {
+          "en": "Autonomic_symptoms",
+          "cn": "自主神经系统症状",
+          "label_intro": {
+            "manifestations": [
+              "感到头晕、站立不稳、头重脚轻或晕厥",
+              "心率加速",
+              "口干",
+              "面色潮红",
+              "头痛",
+              "面色苍白",
+              "竖毛（毛发竖立）",
+              "气短",
+              "有出汗倾向"
+            ]
+          }
+        },
+        {
+          "en": "Cardiovascular_symptoms",
+          "cn": "心血管系统症状",
+          "label_intro": {
+            "manifestations": [
+              "心动过速",
+              "心悸",
+              "胸痛",
+              "血管搏动感",
+              "晕厥感",
+              "心脏漏搏感"
+            ]
+          }
+        },
+        {
+          "en": "Catatonic_behavior",
+          "cn": "紧张症行为",
+          "label_intro": {
+            "manifestations": [
+              "惊跳反应",
+              "过度警觉",
+              "对象征或类似于创伤事件某方面的内在或外在暗示，产生明显的生理反应"
+            ]
+          }
+        },
+        {
+          "en": "Decreased_energy_tiredness_fatigue",
+          "cn": "疲惫或精力缺乏",
+          "label_intro": {
+            "manifestations": [
+              "容易疲劳",
+              "感到没有任何精力做任何事",
+              "完成任务的效率降低",
+              "无体能消耗下的持续疲劳"
+            ]
+          }
+        },
+        {
+          "en": "Depressed_Mood",
+          "cn": "抑郁心境",
+          "label_intro": {
+            "manifestations": [
+              "经常哭泣",
+              "有痛苦的不完整感或不安感",
+              "感到悲伤、空虚、无望",
+              "无情感体验"
+            ]
+          }
+        },
+        {
+          "en": "Gastrointestinal_symptoms",
+          "cn": "胃肠道症状",
+          "label_intro": {
+            "manifestations": [
+              "吞咽困难",
+              "胀气",
+              "腹痛",
+              "烧心",
+              "胃食管反流",
+              "恶心",
+              "呕吐",
+              "腹鸣",
+              "大便稀溏",
+              "体重减轻",
+              "便秘",
+              "腹泻",
+              "肠易激综合征"
+            ]
+          }
+        },
+        {
+          "en": "Genitourinary_symptoms",
+          "cn": "泌尿生殖系统症状",
+          "label_intro": {
+            "manifestations": [
+              "尿频",
+              "尿急",
+              "出现性冷淡",
+              "闭经",
+              "阳痿（勃起功能障碍）",
+              "性欲丧失",
+              "月经过多",
+              "月经不调",
+              "早泄"
+            ]
+          }
+        },
+        {
+          "en": "Hyperactivity_agitation",
+          "cn": "多动与激越",
+          "label_intro": {
+            "manifestations": [
+              "经常手脚动个不停或在座位上扭动",
+              "当被期待坐在座位上时却经常离座",
+              "经常在不适当的场所跑来跑去或爬上爬下",
+              "经常无法安静地玩耍或从事休闲活动",
+              "经常“忙个不停“，好像”被发动机驱动”着",
+              "感到坐立不安或烦躁不宁",
+              "在独处时难以放松身心",
+              "经常进行无目的的活动",
+              "无法静坐",
+              "总是来回踱步，搓手，拉扯或摩擦皮肤、衣服或其他物体"
+            ]
+          }
+        },
+        {
+          "en": "Impulsivity",
+          "cn": "冲动性",
+          "label_intro": {
+            "manifestations": [
+              "经常在提问还没有讲完之前就把答案脱口而出",
+              "经常难以等待轮到他或她",
+              "经常打断或侵扰他人"
+            ]
+          }
+        },
+        {
+          "en": "Inattention",
+          "cn": "注意力不集中",
+          "label_intro": {
+            "manifestations": [
+              "难以进行理性的对话或听从指令",
+              "思考能力或注意力减退",
+              "经常回避、厌恶或不愿从事需要精神持久努力的任务",
+              "经常不听从指令，无法完成学校作业、家务或工作职责",
+              "当别人直接对他/她说话时，经常好像没在听",
+              "经常难以组织任务和活动",
+              "经常丢失任务或活动所需的物品",
+              "经常无法密切关注细节，或在学校作业、工作中犯粗心的错误",
+              "在任务或游戏活动中经常难以维持注意力",
+              "难以记住约会或义务",
+              "在完成项目的挑战性部分后，难以完成最后的细节收尾工作",
+              "乱放东西或难以在家里或工作中找到物品",
+              "经常容易被外界刺激分心",
+              "在日常活动中经常遗忘（如做家务、付账单、回电话）"
+            ]
+          }
+        },
+        {
+          "en": "Indecisiveness",
+          "cn": "决断困难",
+          "label_intro": {
+            "manifestations": [
+              "发现做决定比平时更困难"
+            ]
+          }
+        },
+        {
+          "en": "Respiratory_symptoms",
+          "cn": "呼吸系统症状",
+          "label_intro": {
+            "manifestations": [
+              "胸痛或不适",
+              "胸部有压迫感或紧缩感",
+              "窒息感",
+              "无法抑制的打嗝",
+              "呼吸困难",
+              "气短或透不过气的感觉"
+            ]
+          }
+        },
+        {
+          "en": "Suicidal_ideas",
+          "cn": "自杀意念",
+          "label_intro": {
+            "manifestations": [
+              "自杀未遂",
+              "害怕死亡",
+              "有某种自杀企图或有某种实施自杀的特定计划",
+              "反复出现没有特定计划的自杀观念",
+              "反复出现关于死亡的想法（而不仅仅是恐惧死亡）"
+            ]
+          }
+        },
+        {
+          "en": "Worthlessness_and_guilty",
+          "cn": "无价值感/内疚感",
+          "label_intro": {
+            "manifestations": [
+              "在大量进食后感到厌恶和内疚",
+              "在进食过量后对自己感到厌恶、抑郁或非常内疚",
+              "对自己感到失望",
+              "因所有的错误而批评自己",
+              "总是预期会受到惩罚",
+              "对许多事情感到内疚",
+              "对自己、他人或世界持有持续且夸大的负性信念或预期",
+              "对导致个体责怪自己或他人的创伤事件的原因或后果，持有持续的、扭曲的认知",
+              "沉浸于内疚或反复思考过去微小的失败",
+              "经常将中性或微不足道的日常事件误解为个人缺陷的证据，并对不幸事件有夸大的责任感",
+              "自责或因患病而感到内疚",
+              "对自身价值的不切实际的负面评价"
+            ]
+          }
+        },
+        {
+          "en": "avoidance_of_stimuli",
+          "cn": "回避创伤刺激",
+          "label_intro": {
+            "manifestations": [
+              "回避或努力回避关于创伤事件或与其密切相关的痛苦记忆、思想或感觉",
+              "回避或努力回避能够唤起关于创伤事件或与其密切相关的痛苦记忆、思想或感觉的外部提醒物（人物、地点、对话、活动、物体、情境）"
+            ]
+          }
+        },
+        {
+          "en": "compensatory_behaviors_to_prevent_weight_gain",
+          "cn": "代偿行为",
+          "label_intro": {
+            "manifestations": [
+              "嚼吐（咀嚼后吐出）",
+              "过度运动",
+              "禁食",
+              "滥用泻药、利尿剂或其他药物",
+              "催吐"
+            ]
+          }
+        },
+        {
+          "en": "compulsions",
+          "cn": "强迫行为",
+          "label_intro": {
+            "manifestations": [
+              "感到必须针对强迫观念而执行的重复行为或精神活动",
+              "攻击性、性或宗教性的强迫行为",
+              "检查强迫",
+              "清洗强迫",
+              "重复、排列和计数强迫",
+              "囤积强迫"
+            ]
+          }
+        },
+        {
+          "en": "diminished_emotional_expression",
+          "cn": "情绪表达减少",
+          "label_intro": {
+            "manifestations": [
+              "面无表情但非无情感",
+              "不轻易流露情感",
+              "（面部）麻木",
+              "情绪表达减少",
+              "过度压抑的情绪表达",
+              "默默流泪"
+            ]
+          }
+        },
+        {
+          "en": "do_things_easily_get_painful_consequences",
+          "cn": "鲁莽/自我毁损行为",
+          "label_intro": {
+            "manifestations": [
+              "自伤或自杀等自毁行为",
+              "危险驾驶",
+              "无视性传播疾病的风险或人际后果",
+              "参与无节制的疯狂购物或进行愚蠢的商业投资",
+              "增加酒精或非处方药物的使用",
+              "不忠或与陌生人发生不加甄别的性遭遇",
+              "在无力支付的情况下购买许多不需要的物品"
+            ]
+          }
+        },
+        {
+          "en": "drastical_shift_in_mood_and_energy",
+          "cn": "情绪与精力显著波动",
+          "label_intro": {
+            "manifestations": [
+              "情绪和精力水平时常发生剧烈转变",
+              "感觉方式发生明显的转变或切换"
+            ]
+          }
+        },
+        {
+          "en": "fear_about_social_situations",
+          "cn": "社交情景恐惧/回避",
+          "label_intro": {
+            "manifestations": [
+              "回避令人恐惧的社交场合",
+              "认为自己在社交方面笨拙、缺乏个人吸引力或低人一等",
+              "害怕或回避交新朋友",
+              "在社交场合哭闹、发脾气、呆滞、紧贴他人、退缩或不说话（常见于儿童）",
+              "害怕交谈或会见陌生人",
+              "害怕在他人面前表现（例如发表演讲）"
+            ]
+          }
+        },
+        {
+          "en": "fear_of_gaining_weight",
+          "cn": "体重增加恐惧",
+          "label_intro": {
+            "manifestations": [
+              "自我评价受体型和体重的过度影响",
+              "体重减轻常被视为令人钦佩的成就和非凡自律的标志",
+              "害怕体重增加或变胖",
+              "感到肥胖",
+              "频繁称重、强迫性地测量身体部位，以及持续照镜子检查“肥胖”区域",
+              "阻碍体重增加的持续行为",
+              "将体重增加视为自控力的不可接受的失败"
+            ]
+          }
+        },
+        {
+          "en": "fears_of_being_negatively_evaluated",
+          "cn": "负性评价恐惧",
+          "label_intro": {
+            "manifestations": [
+              "因害怕手颤抖而回避在公共场合饮水、进食、书写或指指点点",
+              "因为对自己的食量感到尴尬而独自进食",
+              "因害怕脸红而回避当众表现、明亮的灯光或讨论亲密话题",
+              "因害怕出汗而回避握手或吃辛辣食物",
+              "担心自己会被评判为焦虑、软弱、疯狂、愚蠢、乏味、令人生畏、肮脏或不讨人喜欢",
+              "以某种方式行动或表现出焦虑症状"
+            ]
+          }
+        },
+        {
+          "en": "flight_of_ideas",
+          "cn": "思维奔逸",
+          "label_intro": {
+            "manifestations": [
+              "语速加快且几乎滔滔不绝",
+              "话题突然转换",
+              "言语变得杂乱无章、语无伦次，令个体感到特别痛苦",
+              "感到思维非常拥挤，以至于说话都很困难"
+            ]
+          }
+        },
+        {
+          "en": "intrusion_symptoms",
+          "cn": "侵入性症状",
+          "label_intro": {
+            "manifestations": [
+              "解离性反应（如闪回），个体感觉或行动得好像创伤事件正在重现",
+              "接触象征或类似于创伤事件某方面的内在或外在暗示时，产生强烈或持久的心理痛苦",
+              "反复出现的痛苦梦境，梦境的内容和/或情感与创伤事件相关",
+              "反复的、不由自主的且侵入性的关于创伤事件的痛苦记忆"
+            ]
+          }
+        },
+        {
+          "en": "loss_of_interest_or_motivation",
+          "cn": "兴趣减退/快感缺失",
+          "label_intro": {
+            "manifestations": [
+              "与他人疏远或隔绝",
+              "不像以前一般享受事物",
+              "对其他人或事物失去了兴趣",
+              "对重要活动的兴趣或参与显著减少",
+              "持续无法体验到正性情绪（如幸福、满足或爱的感觉）",
+              "性兴趣或性欲较以往水平显著降低",
+              "失去做事的动力",
+              "对以往令人愉快的爱好不再感兴趣"
+            ]
+          }
+        },
+        {
+          "en": "more_talktive",
+          "cn": "多语/言语迫促",
+          "label_intro": {
+            "manifestations": [
+              "说话的音量和力度变得比表达的内容更重要",
+              "经常话多（过分健谈）",
+              "言语可能急促、强压、大声且难以打断",
+              "在公共场合自发地与陌生人开始长篇大论的交谈",
+              "滔滔不绝地说话，不顾他人想要交流的意愿"
+            ]
+          }
+        },
+        {
+          "en": "obsession",
+          "cn": "强迫观念",
+          "label_intro": {
+            "manifestations": [
+              "因违背意愿进入脑海的不愉快想法而烦恼",
+              "很难控制自己的想法",
+              "经常产生糟糕的想法且难以摆脱它们",
+              "攻击性、性或宗教性的强迫观念",
+              "收集食谱或囤积食物",
+              "污染强迫观念",
+              "怀疑自己是否真的做了或做对了某事",
+              "害怕伤害自己或他人",
+              "中和性思维",
+              "排列/秩序强迫观念",
+              "专注于关于食物的想法",
+              "对称性强迫观念"
+            ]
+          }
+        },
+        {
+          "en": "panic_fear",
+          "cn": "惊恐恐惧",
+          "label_intro": {
+            "manifestations": [
+              "害怕失控、发疯或死亡"
+            ]
+          }
+        },
+        {
+          "en": "pessimism",
+          "cn": "悲观",
+          "label_intro": {
+            "manifestations": [
+              "感觉未来的希望或计划不会实现",
+              "对未来感到灰心"
+            ]
+          }
+        },
+        {
+          "en": "poor_memory",
+          "cn": "记忆损害",
+          "label_intro": {
+            "manifestations": [
+              "无法回忆起创伤事件的一个重要方面（解离性遗忘）",
+              "抱怨记忆困难",
+              "难以记住日常事件",
+              "大脑一片空白",
+              "在日常活动中经常遗忘",
+              "记忆力差"
+            ]
+          }
+        },
+        {
+          "en": "sleep_disturbance",
+          "cn": "睡眠障碍",
+          "label_intro": {
+            "manifestations": [
+              "入睡困难（初期失眠）",
+              "睡眠需求减少",
+              "睡眠无法恢复精力",
+              "连续几天不睡也不觉得累",
+              "失眠",
+              "睡眠维持困难（中段失眠）",
+              "频繁噩梦",
+              "夜间惊恐发作",
+              "夜间睡眠时间延长或日间睡眠增加",
+              "过度睡眠（嗜睡）",
+              "早醒（醒的太早且无法再次入睡）"
+            ]
+          }
+        },
+        {
+          "en": "somatic_muscle",
+          "cn": "躯体肌肉系统症状",
+          "label_intro": {
+            "manifestations": [
+              "震颤或抖动、抽搐、肌阵挛性抽动",
+              "磨牙",
+              "肌张力增高",
+              "肌肉酸痛或疼痛",
+              "肌肉僵硬",
+              "声音不稳/颤抖"
+            ]
+          }
+        },
+        {
+          "en": "somatic_symptoms_others",
+          "cn": "其他躯体症状",
+          "label_intro": {
+            "manifestations": [
+              "现实解体（感觉不真实）或人格解体（感觉与自己分离）",
+              "感觉异常（麻木感或刺痛感）",
+              "无法控制的尖叫或哭泣"
+            ]
+          }
+        },
+        {
+          "en": "somatic_symptoms_sensory",
+          "cn": "躯体感觉系统症状",
+          "label_intro": {
+            "manifestations": [
+              "发冷或发热感",
+              "耳鸣",
+              "视力模糊",
+              "冷潮（发冷）",
+              "虚弱感",
+              "潮热（面部潮红发热）",
+              "针刺感"
+            ]
+          }
+        },
+        {
+          "en": "weight_and_appetite_change",
+          "cn": "体重与食欲改变",
+          "label_intro": {
+            "manifestations": [
+              "在感觉不到生理饥饿时进食大量食物",
+              "进食速度比正常快得多",
+              "吃到感觉不舒服的饱胀为止",
+              "食欲比以前差",
+              "反复的暴食发作",
+              "限制能量摄入，导致体重显著过低",
+              "显著的体重减轻",
+              "进食更多，且可能渴求特定食物（例如甜食或其他碳水化合物）",
+              "感觉自己无法停止进食，或无法控制吃什么、吃多少",
+              "感觉自己吃掉了别人会认为是不寻常的大量食物",
+              "必须强迫自己进食",
+              "体重显著增加"
+            ]
+          }
+        }
+      ],
+      "categories": {
+        "Anger_Irritability": {
+          "n_posts_in_dataset": 56426,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5035439304216389",
+              "content": "我就是有病就是缺乏安全感就是敏感就是脾气不好暴躁易怒怎么了怎么了怎么了能不能别他妈给我找事了啊？！！！！",
+              "score": 1.0,
+              "content_en": "i'm just sick, i lack security, i'm sensitive, i have a bad temper, i get angry easily, what's wrong with me, what's wrong, what's wrong, can't you just leave me the fuck alone?!!!"
+            },
+            {
+              "post_id": "4631814222383146",
+              "content": "为什么最近三四天，脾气很爆，对什么事情什么人都很不耐烦。别人多说两句就会想发火(当然我在忍，可能表面看起来就是有点冲，但是我在心里已经快忍不住骂人摔东西了)我妈打电话问我回不回家，我很想态度好的和她说话，但是最后说出的话都是不耐烦的，忍住不耐烦说出的话就是冷冰冰的。",
+              "score": 0.9999,
+              "content_en": "why have i been so irritable lately, over the past three or four days? i'm really impatient with everything and everyone. just a few more words from someone and i want to lose my temper (though i'm trying to hold back, maybe it just looks a bit aggressive on the surface, but inside i'm already close to yelling or throwing something). my mom called me asking if i'm coming home, i really wanted to speak to her politely, but in the end, what came out was impatient. trying to hold back my impatience just makes me sound cold and indifferent."
+            },
+            {
+              "post_id": "5073896965409837",
+              "content": "感觉自己越来越易怒了，别人一说点啥就想炸毛，尤其是对家长，好烦好烦我也不想这样，咋改啊老是事后后悔自己语气为啥这么冲",
+              "score": 0.9999,
+              "content_en": "i feel more irritable lately, like every little thing people say makes me lose my temper, especially with my parents, it's so annoying. i don't want to be like this, but i can't help it. i always regret my tone after, why do i get so angry all the time?"
+            }
+          ],
+          "label_en": "Anger_Irritability",
+          "label_cn": "易激惹心境"
+        },
+        "Anxious_Mood": {
+          "n_posts_in_dataset": 31527,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5033050069271550",
+              "content": "有没有人跟我一样，灾难化思维非常严重的。真的每时每刻都很焦虑痛苦。",
+              "score": 0.9999,
+              "content_en": "Has anyone else ever had really severe catastrophizing thoughts? I'm really anxious and in pain all the time."
+            },
+            {
+              "post_id": "4854533781985447",
+              "content": "三年没发的焦虑症。。。这次疫情让它发了。。我整个人都不太好。。。",
+              "score": 0.9999,
+              "content_en": "Three years without an anxiety disorder... this pandemic triggered it again. I'm not feeling so good all over."
+            },
+            {
+              "post_id": "4940242798248662",
+              "content": "我真的要死了。。。明明都没什么突然整这出我要焦虑死了我不想开学。",
+              "score": 0.9998,
+              "content_en": "I really want to die... there's nothing really wrong, yet all of a sudden I'm having an anxiety attack. I don't want to go back to school."
+            }
+          ],
+          "label_en": "Anxious_Mood",
+          "label_cn": "焦虑心境"
+        },
+        "Autonomic_symptoms": {
+          "n_posts_in_dataset": 13384,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4827766061532955",
+              "content": "有没有人在啊 我现在好难受。眼泪在打转。吃了快四年药了 现在心里难受 感觉无力气 脸很白 手发麻。不舒服 说不出来 头晕 感觉要摔倒。像惊恐发作没发起来的样子。",
+              "score": 0.9999,
+              "content_en": "Is there anyone here? I'm really feeling awful right now. My tears are just about to spill. I've been on medication for almost four years, but now I feel so bad inside, like I don't have any strength left. My face is pale, my hands are numb. I feel uncomfortable, but I can't put it into words. I'm dizzy, like I might fall down. It's like a panic attack that hasn't actually happened."
+            },
+            {
+              "post_id": "5055079076595946",
+              "content": "断药第二天。好难受。头疼头晕快要炸了。呼吸困难。连动都不想动，睡觉都很难受。我想吃药了。我快受不了了。可是他们强制给我停药怎么办？他们非说我没事了。",
+              "score": 0.9999,
+              "content_en": "Day two of stopping the medication. I feel so awful. Headache and dizziness, like my head is going to explode. Difficulty breathing. I don't want to move at all, even sleeping is uncomfortable. I want to take the medicine. I can't take it anymore. But what if they force me to stop? They insist I'm fine."
+            },
+            {
+              "post_id": "4376995745587040",
+              "content": "今天睡了一天，早上妈妈要去镇上，叫我起来，我不起床。气的倒在地上哭，可怕的是我冷漠的没有感觉，头痛的面积更大了，感觉后脑勺和前脑壳一块抽，你们会不。",
+              "score": 0.9998,
+              "content_en": "I slept all day today. In the morning, my mom went to town and told me to get up, but I didn't get up. I got so angry that I fell to the ground and started crying. What's even worse is that I felt completely numb, with no emotions at all. My headache has spread even more, feeling like there's a sharp pain in both the back of my head and the front. You would understand, right?"
+            }
+          ],
+          "label_en": "Autonomic_symptoms",
+          "label_cn": "自主神经系统症状"
+        },
+        "Cardiovascular_symptoms": {
+          "n_posts_in_dataset": 13705,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4686080295834187",
+              "content": "心脏疼的时候除了去医院，还什么办法能缓解？今天又疼了我一个多小时了！好难受啊！",
+              "score": 0.9995,
+              "content_en": "My heart hurts and besides going to the hospital, what else can relieve it? It's been hurting me for over an hour today! It's so unbearable!"
+            },
+            {
+              "post_id": "4824202685449293",
+              "content": "自救指南今天在寺庙里多站了会，拜了几拜，心脏就疼得厉害，颤巍巍的，汗像下雨似的，我已经不中用了吗？估计要了！感觉什么也做不了了，这副躯壳没用了！",
+              "score": 0.9994,
+              "content_en": "Today I stayed longer in the temple, prayed a few prayers, and my heart started hurting really badly, shaking, and sweat was pouring down like rain. Am I no good anymore? I think I'm going to die! I feel like I can't do anything anymore, this body is useless!"
+            },
+            {
+              "post_id": "4427472923569757",
+              "content": "还没下班时就开始头晕、心悸、手发抖，就突然这样子，下班后又发生了一点事，我觉得我整个人都不好了，快崩溃了一样！",
+              "score": 0.9994,
+              "content_en": "I started feeling dizzy, heart racing, and hands shaking before even finishing work, just like that out of nowhere. Then after work, something else happened, and I feel like I'm completely falling apart, like I'm about to break down!"
+            }
+          ],
+          "label_en": "Cardiovascular_symptoms",
+          "label_cn": "心血管系统症状"
+        },
+        "Catatonic_behavior": {
+          "n_posts_in_dataset": 11545,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5024662973582097",
+              "content": "真的越来越害怕睡觉了 中午睡午觉 不知道怎么睡着的时候突然心跳的特别快 感觉都要跳出来了一样 然后想醒又醒不来 动也动不了 想喊人喊不出来然后我就一直强迫自己靠意志醒 然后突然我以为醒了 结果又陷入了这种模式 重复了几次 后来真正的醒来后才发现这更像是梦中梦中梦 真的太可怕",
+              "score": 0.9995,
+              "content_en": "I'm getting more and more scared of sleeping. During my afternoon nap, I didn't know how to fall asleep, and suddenly my heart started beating really fast, like it was about to jump out of my chest. Then I wanted to wake up but couldn't, couldn't move at all, couldn't call for help. I forced myself to wake up with sheer will, and suddenly I thought I had woken up, but then I fell back into the same pattern again. It repeated several times. Finally, when I actually woke up, I realized it was like a dream within a dream within a dream. It was really terrifying."
+            },
+            {
+              "post_id": "4457695602511547",
+              "content": "我也想我做了什么事，为什么总有人发些莫名其妙的信息给我，还都是威胁的，我过去怎么了，是不是真的该死，失忆让我恐惧，好像会触碰什么就爆发了。",
+              "score": 0.9993,
+              "content_en": "I also wonder what I did to deserve all these strange messages from people, all of them threatening. What did I do in the past? Am I really supposed to die? The memory loss makes me scared, like I'll explode if I touch anything."
+            },
+            {
+              "post_id": "4829215330933738",
+              "content": "今天又一次走在了大街上，我还是有点担心那种战栗凝固的状态会找来，但又有一半大脑已经处在轻松了状态了，一半一半。我被恐惧统治大脑太久了，这么害怕也是正常的，我没强制我放松，我就只是说，你这样有情可原，可以理解。",
+              "score": 0.9991,
+              "content_en": "Today I walked again on the street, and I'm still a bit worried that that freezing, trembling state might come back. But half of my brain is already in a relaxed state, half and half. I've been ruled by fear for too long, and being so scared is normal. I didn't force myself to relax, I just said to myself, it's understandable, it's forgivable."
+            }
+          ],
+          "label_en": "Catatonic_behavior",
+          "label_cn": "紧张症行为"
+        },
+        "Decreased_energy_tiredness_fatigue": {
+          "n_posts_in_dataset": 24633,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4674245051547951",
+              "content": "Rock 懒和抑郁的差别 很离谱 我是躺着床上觉得累坐着也觉得累 去吃饭觉得累今天就走了100米 我感觉要虚脱一样一进门就倒虽然有时候也会怀疑自己是懒还是抑郁但是真的什么不做都会狠累！！",
+              "score": 0.9998,
+              "content_en": "Rock the difference between laziness and depression is crazy. I feel tired lying in bed, tired sitting down, tired just going to eat, so today I only walked 100 meters. I feel like I'm about to collapse. As soon as I get home, I just fall down. Sometimes I wonder if I'm just lazy or depressed, but really, even doing nothing feels super exhausting!"
+            },
+            {
+              "post_id": "4863744822483283",
+              "content": "最后一百天 好累，身心俱疲，好累，好累，好累，压的我转不过气的家人。好想离开，但是因为有你的在，我还没离开。",
+              "score": 0.9997,
+              "content_en": "Last 100 days, so tired, both body and mind are exhausted, so tired, so tired, so tired, my family is pressing down on me so hard I can't catch my breath. I really want to leave, but because you're here, I haven't left yet."
+            },
+            {
+              "post_id": "4455169200569297",
+              "content": "友友们很好，一直都在帮助我。但自己好像连跨一步的力气也没有了。压抑，疲倦，还有那莫名其妙的崩溃。好不容易在友友们的开导下想去医院看看，却没有号了。期待快点儿死于一场意外吧，这么些年的光阴，想好好的沉沉的睡一觉。明天的太阳或许也会很好，但今天的太阳已经足够温暖，我见到了，也就够了。",
+              "score": 0.9997,
+              "content_en": "Friends are great, they've always been helping me. But I feel like I don't even have the strength to take one step forward. It's so oppressive, so tired, and there's this inexplicable breakdown. I finally wanted to go to the hospital after some advice from my friends, but there were no appointments available. I just hope to die in an accident soon. These years of life, I just want to sleep deeply and peacefully. Tomorrow's sun might be nice, but today's sun was already warm enough, and I've seen it, so that's enough."
+            }
+          ],
+          "label_en": "Decreased_energy_tiredness_fatigue",
+          "label_cn": "疲惫或精力缺乏"
+        },
+        "Depressed_Mood": {
+          "n_posts_in_dataset": 138858,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4437500892124389",
+              "content": "我又犯病了，好难受好绝望，好难受啊，眼泪都掉下来了啊，为什么会这样崩溃啊，为什么啊！",
+              "score": 1.0,
+              "content_en": "I relapsed again, feeling so miserable and hopeless, so miserable, tears are just flowing down, why did I break down like this, why? Why!"
+            },
+            {
+              "post_id": "4711183824722016",
+              "content": "为什么会这样啊。为什么每年抑郁症都要复发啊。我真的撑不住了。",
+              "score": 0.9999,
+              "content_en": "Why does this keep happening? Why does depression keep relapsing every year? I really can't take it anymore."
+            },
+            {
+              "post_id": "4947831767697377",
+              "content": "我好难过，哭也不知道为什么在哭，就是单纯的哭泣，难过的理由都想不清楚。不知道是为什么。以往难过都是能清楚的感知到为什么而难过，为什么而痛苦，今天没有任何理由，突然开始哭泣，想知道自己是因为什么，可是根本想不出来。",
+              "score": 0.9999,
+              "content_en": "I'm so sad, crying without knowing why, just crying purely, unable to figure out the reason for my sadness. I don't know why. Usually when I'm upset, I can clearly feel why I'm upset and why I'm in pain, but today there's no reason at all. It just started suddenly, and I try to figure out what's wrong, but I can't even come up with an answer."
+            }
+          ],
+          "label_en": "Depressed_Mood",
+          "label_cn": "抑郁心境"
+        },
+        "Gastrointestinal_symptoms": {
+          "n_posts_in_dataset": 20458,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5049585735303618",
+              "content": "不知道是因为没有好好吃饭还是情绪问题，我现在胃疼的想yue，太难受了。",
+              "score": 0.9999,
+              "content_en": "I don't know if it's because I didn't eat properly or an emotional issue, but my stomach hurts so bad I want to die. It's really unbearable."
+            },
+            {
+              "post_id": "5002916606511908",
+              "content": "一年多没工作来上海漂了，挺不喜欢这里的，消费高又很湿，我的胃最怕湿寒了，今天果然发作了，好久没犯老毛病了，胃里恶心，想拉屎想吐。钢材一瞬间惊恐发作了，难受。好想回东北，可是我也没什么退路了，只能靠自己。有时候真的很厌倦这副身体，娇气。",
+              "score": 0.9999,
+              "content_en": "More than a year without a job, drifting in Shanghai, I really don't like it here. The cost of living is high and the weather is really damp, and my stomach hates dampness and cold. Today it finally kicked in, after a long time without my old problem. I feel nauseous, want to go to the bathroom and throw up. The panic attack hit all of a sudden, so uncomfortable. I really want to go back to Northeast China, but I have no way out, I can only rely on myself. Sometimes I really get tired of this body, it's so delicate."
+            },
+            {
+              "post_id": "5065431056384540",
+              "content": "有没有肠易激综合征的宝，我真的要被折磨死了。感觉吃了药都没用。怎么办哟？",
+              "score": 0.9998,
+              "content_en": "Is there anyone with IBS? I'm really being tortured. It feels like the medication isn't helping at all. What should I do?"
+            }
+          ],
+          "label_en": "Gastrointestinal_symptoms",
+          "label_cn": "胃肠道症状"
+        },
+        "Genitourinary_symptoms": {
+          "n_posts_in_dataset": 3446,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5006563573498162",
+              "content": "嗯……对不起我的舍友们 我真的是个尿眠体 难为你们了…… 每次拉尿都害怕吵醒你们！",
+              "score": 0.9976,
+              "content_en": "Hmm... sorry to my roommates, I'm really a light sleeper. You guys must be so tired of me... Every time I need to go to the bathroom, I'm scared of waking you up!"
+            },
+            {
+              "post_id": "4853971611552880",
+              "content": "漏尿是真的，我生完孩子四年多了，从未出现过这么严重的憋不住尿的情况，我没有咳嗽，几乎二十分钟就要上一次厕所，甚至连二十分钟都不到，阳了那几天，我一天要换三四条裤子，真的从客厅到厕所这段距离都憋不住。还好，第四天就基本恢复了，要不然我真的苦恼死了。",
+              "score": 0.9975,
+              "content_en": "I really do have urinary incontinence. It's been over four years since I gave birth, and I've never had such severe leakage before. I don't even cough, but I have to go to the bathroom almost every twenty minutes, sometimes even less. During those days when I had the virus, I had to change my pants three or four times a day. It was really hard, because I couldn't hold it even for the distance from the living room to the bathroom. Fortunately, I recovered by the fourth day, otherwise I would have been so frustrated."
+            },
+            {
+              "post_id": "4453809256796844",
+              "content": "药吃多了口干喝水喝好多水然后尿频尿急尿不尽继续口干继续喝水睡前要上几遍厕所，我太难了。",
+              "score": 0.9975,
+              "content_en": "I took too much medication, and now my mouth is super dry. I drink a lot of water, but then I have to pee frequently, urgently, and it doesn't feel like it's all coming out. The dry mouth keeps coming back, so I keep drinking. I have to go to the bathroom several times before bed. I'm really struggling."
+            }
+          ],
+          "label_en": "Genitourinary_symptoms",
+          "label_cn": "泌尿生殖系统症状"
+        },
+        "Hyperactivity_agitation": {
+          "n_posts_in_dataset": 1388,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4612201274673838",
+              "content": "到底还要我怎样？又开始了，又开始焦虑又开始坐立不安，明明才开学难道真的要休学吗？",
+              "score": 0.9997,
+              "content_en": "How much more do I have to go through? It's starting again, the anxiety, the restlessness. It's only the start of the semester, can it really be that I need to drop out?"
+            },
+            {
+              "post_id": "4937913336337695",
+              "content": "我好烦好烦好烦，坐不住，在椅子上一直换姿势，不知道要干什么，但是又停不下来活动，手机没意思，可是忍不住打开一个个软件，也不知道看什么，去做点别的也静不下心来，一小会就觉得好累好累，感觉要爆炸了",
+              "score": 0.9972,
+              "content_en": "I'm so frustrated, so frustrated, so frustrated, can't sit still, keep changing positions on the chair, don't know what to do, but can't stop moving, phone is boring, but can't resist opening one app after another, don't know what to look at, trying to do something else but can't focus, after a little while feel so exhausted, so exhausted, like I'm about to explode."
+            },
+            {
+              "post_id": "4799156058588534",
+              "content": "你们的坐立不安是怎样的？我感觉我的坐立不安是坐在椅子上学习或者吃饭总感觉板凳和脚底下摇摇晃晃的，坐不稳，然后不停的用一些小动作平衡这种感觉，要不然就特别难受，感觉要摔倒一样。有这样的吗？",
+              "score": 0.9996,
+              "content_en": "Your restlessness feels like when I'm sitting on a chair studying or eating, I always feel the seat and the ground underneath me wobbling, like it's unstable. I can't sit still, so I keep doing little movements to balance that feeling, or else I get really uncomfortable, like I'm about to fall. Has anyone else experienced this?"
+            }
+          ],
+          "label_en": "Hyperactivity_agitation",
+          "label_cn": "多动与激越"
+        },
+        "Impulsivity": {
+          "n_posts_in_dataset": 7419,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4923569870736170",
+              "content": "真的不能再这样了，我不知道为什么我花这么多钱给她做生日礼物，关键是我买的其中一个东西她根本就不会喜欢，买完几个小时了我现在反应过来。冲动消费已经在各个方面打击我了",
+              "score": 0.9996,
+              "content_en": "I really can't keep doing this anymore. I don't know why I spent so much money on her birthday gifts. The thing is, one of the things I bought she probably wouldn't even like, and I realized that just a few hours after buying it. Impulsive shopping has been hitting me hard in every aspect."
+            },
+            {
+              "post_id": "5076606840215194",
+              "content": "躁期分享欲特别特别特别严重，会给很多熟悉的不熟悉人发一堆信息……可以不要讨厌我吗……或者直接拒绝我……我真的控制不住自己发信息怎么办……",
+              "score": 0.9985,
+              "content_en": "Manic phase sharing desire is super super super severe, I send a bunch of messages to a lot of familiar and unfamiliar people... Can you not hate me... or just reject me... I really can't control myself from sending messages..."
+            },
+            {
+              "post_id": "4858232059204859",
+              "content": "没办法解决事只好解决人了真正意义上的第一次恋爱我亲手画上句号删掉了该删的所有发完这条微博这张截图也没有了总有人说我是个冲动的人也算吧但好在我从来不后悔",
+              "score": 0.9987,
+              "content_en": "couldn't solve the problem so i had to solve the person. this was my first real relationship, and i ended it myself. i deleted everything that needed deleting. after posting this weibo, this screenshot is gone too. people always say i'm impulsive, maybe that's true. but at least i never regret it."
+            }
+          ],
+          "label_en": "Impulsivity",
+          "label_cn": "冲动性"
+        },
+        "Inattention": {
+          "n_posts_in_dataset": 2788,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5026047151837522",
+              "content": "大家抑郁了之后真的还学的进去吗？我现在根本看不了书。。一看，书上的那些字就变得模糊 注意力根本没有办法集中 我一直就学不进去 烦。。",
+              "score": 0.9984,
+              "content_en": "After depression, can you really still study? I can't even look at books anymore. Whenever I try, the words on the pages become blurry, and I can't focus at all. I've always had trouble studying, it's so frustrating..."
+            },
+            {
+              "post_id": "4829270440151997",
+              "content": "我一到学习就各种不舒服，注意力老是被手啊，腿啊等身体上的某部位固着，都不知道手该咋摆放了，各种都不舒服，前一阵子是腿，现在换成手，总之就是源源不断，甚至有时候几个不舒服的地方可以同时出现，我TM只想好好学习，可以吗？!",
+              "score": 0.9985,
+              "content_en": "Every time I try to study, I feel all sorts of discomfort. My attention keeps getting stuck on certain body parts, like my hands or legs. I don't know where to put my hands, and everything feels uncomfortable. It was my legs before, now it's my hands. It just keeps coming, and sometimes multiple uncomfortable sensations happen at the same time. I just want to study properly, can I?!!"
+            },
+            {
+              "post_id": "4837590232990659",
+              "content": "好烦，感觉现在脑子变慢了，注意力没法集中，反应慢半拍，知识点也记不住，做题也没思路，我就是一个废人，明明什么也没做，就是感觉很累，我接受不了这样的自己，计划全被打乱了。",
+              "score": 0.9978,
+              "content_en": "I'm so frustrated, it feels like my brain is slowing down, I can't focus, my reactions are lagging, I can't remember the knowledge points, and I don't even know how to approach the problems. I feel like a total failure, I did nothing but I just feel so exhausted. I can't accept this version of myself, everything I planned is all messed up."
+            }
+          ],
+          "label_en": "Inattention",
+          "label_cn": "注意力不集中"
+        },
+        "Indecisiveness": {
+          "n_posts_in_dataset": 2776,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4903739682982094",
+              "content": "我总是想的很好，而不去做事要去做事的时候，总是举棋不定，犹豫不决如果不克服，那我必定这辈子也就卡在这个上限上。人有时候，就要逼自己一把。再惨悻悻的回来，说。自己这个时候，真的不行。",
+              "score": 0.9978,
+              "content_en": "I always think things through perfectly, but when it comes to actually doing something, I always hesitate and can't make up my mind. If I don't overcome this, I'll be stuck at this limit for the rest of my life. Sometimes, you just have to push yourself, even if you come back feeling really defeated and say, \"At this moment, I really can't do it.\""
+            },
+            {
+              "post_id": "4305670482622542",
+              "content": "今晚写了日记。发现，我简直是自己的杠精。对于自己的每一个想法，几乎都有反对和质疑的地方，犹豫不决，摇摆不定，活得好艰难。",
+              "score": 0.9988,
+              "content_en": "Tonight I wrote a diary entry. I realized I'm basically my own nagging voice. For every thought I have, there's almost always an opposing opinion or doubt, hesitating, wavering, living a really tough life."
+            },
+            {
+              "post_id": "5087798523330571",
+              "content": "我也不清楚我到底想明白没有 脑子里总是在想要不要退学 总感觉学下去我肯定坚持不了 但退学了能干什么我更不知道 我一会觉得我想好好的治病 又总认为我治不好的 妈妈说支持我的一切选择 但好像我确实对一切都没有想好 对一切选择都纠结",
+              "score": 0.9981,
+              "content_en": "I don't even know if I've really figured anything out. My brain keeps thinking about whether I should drop out of school. I always feel like I won't be able to keep going if I stay, but I don't know what I'd do if I did drop out. Sometimes I think I want to take care of myself properly, but I keep thinking I can't get better. My mom says she supports whatever choice I make, but I guess I really haven't made up my mind about anything. I just keep hesitating over every decision."
+            }
+          ],
+          "label_en": "Indecisiveness",
+          "label_cn": "决断困难"
+        },
+        "Respiratory_symptoms": {
+          "n_posts_in_dataset": 10202,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4824221681451022",
+              "content": "大家惊恐发作最严重的一次是什么感觉啊，我是手麻动不了，一点力气也没，也没力气坐起来，心慌胸闷喘不过气，感觉下一秒就要没了，一直持续了二十几分钟等救护车，救护车把我拉倒医院后就开始好转",
+              "score": 0.9998,
+              "content_en": "Everyone, what was the worst time you had a panic attack like? I couldn't move my hands, had no strength at all, couldn't even sit up. My heart was racing, chest tight, couldn't breathe. It felt like I was going to die any second. It lasted for over twenty minutes until the ambulance came. After they took me to the hospital, things started to get better."
+            },
+            {
+              "post_id": "4599936861871394",
+              "content": "为什么是我。现在感觉呼吸沉重，心脏在向下坠落，沉甸甸的，压的我喘不上气。",
+              "score": 0.9994,
+              "content_en": "Why me. Right now I feel like my breathing is heavy, my heart is sinking down, heavy and pressing down, making it hard to catch my breath."
+            },
+            {
+              "post_id": "4848997627330851",
+              "content": "真的像一场生化危机一样！也许是我的体质太差，扛不住。感染的第几天了，反复发烧还在靠退烧药，张着嘴大口大口的吃力地吸着每一口空气，一直喘气，强制自己尽量少咳嗽那么一下，咳一下带动整个胸腹部以下每一片都疼。摇摇欲坠…我真的能抗过去吗？",
+              "score": 0.9992,
+              "content_en": "It's really like a biohazard crisis! Maybe my body is just too weak to handle it. Days into the infection, I'm still feverish and relying on fever medicine. I'm gasping for air, taking big breaths with great effort, struggling to breathe. I force myself to cough as little as possible, but every cough hurts all the way from my chest down to my abdomen and beyond. I'm on the verge of collapsing... Can I really make it through this?"
+            }
+          ],
+          "label_en": "Respiratory_symptoms",
+          "label_cn": "呼吸系统症状"
+        },
+        "Suicidal_ideas": {
+          "n_posts_in_dataset": 32475,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4961930008860440",
+              "content": "老是想死 想死掉 为啥啊 是病吗 是不是在逃避什么 住院，病友们有好东西，好吃的，也会分给我吃，也会跟我一起打牌斗地主，护士姐姐们也关照我，问候我，帮助我对抗不好的念头，可我还是想破坏自己，看着身上的伤口，还是想要一伤再伤。",
+              "score": 0.9997,
+              "content_en": "Always thinking about dying, wanting to die, why is this happening? Is it a disease? Am I avoiding something? They admit you to the hospital, and the other patients share good things, food, and play cards with me, like playing ditch. The nurse sisters also take care of me, greet me, and help me fight against the bad thoughts. But I still want to hurt myself, looking at the wounds on my body, I still want to hurt myself again."
+            },
+            {
+              "post_id": "4941870343915788",
+              "content": "吃舍曲林三年，还有噩梦我真是服了，之前做梦自杀是跳楼，最近做梦自杀是上吊，大概是因为试过吞药割腕后，曾研究过各种方式的可行性。熬了三年，我依旧觉得能苟着不失控，已经耗费了极大力气。",
+              "score": 0.9997,
+              "content_en": "Taking sertraline for three years, I still have nightmares, and I'm really fed up. Before, my dreams about suicide were about jumping out of a window, but lately they've been about hanging myself. I guess it's because after trying swallowing pills and cutting my wrists, I researched the feasibility of various methods. I've endured three years, and I still feel like I can keep going without losing control, but it's taken an enormous amount of effort."
+            },
+            {
+              "post_id": "4396589793277685",
+              "content": "从昨天晚上到现在，我满脑子都是自杀，各种死法，吞药，割腕，跳楼，跳湖，上吊，烧炭，甚至触电，车祸，我想这次我是真的坚持不下去了。以前是之前想想，并不想死，现在是一点活下去的欲望都没有了。我原以为支持我活着的唯一动力就是我老公，但是我没想到原来在他眼里我那么差那么差。",
+              "score": 0.9996,
+              "content_en": "Since last night, all I've been thinking about is suicide, all sorts of ways to die—taking pills, cutting my wrists, jumping from a building, jumping into a lake, hanging myself, burning with charcoal, even electrocution or a car accident. I think this time I really can't go on anymore. Before, I would think about it but not really want to die. Now, I have absolutely no desire to live anymore. I used to think the only thing keeping me alive was my husband, but I didn't realize how bad I must look in his eyes."
+            }
+          ],
+          "label_en": "Suicidal_ideas",
+          "label_cn": "自杀意念"
+        },
+        "Worthlessness_and_guilty": {
+          "n_posts_in_dataset": 40687,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4389751689739737",
+              "content": "饭饭，我找不到自己的价值。感觉自己毫无价值，在这里是拖累别人。是自己不擅长吗？还是自己真的一无是处。每天嘻嘻哈哈，感觉没有压力，但是真的…每一天都在嫌弃自己，厌恶自己。这种感觉，真的，哇哦！",
+              "score": 0.9998,
+              "content_en": "Hey, I can't find my own value. I feel like I'm completely worthless and a burden to others. Is it because I'm not good at anything? Or am I really just completely useless? Every day I smile and act happy, but honestly... every day I hate myself, despise myself. This feeling, it's really, wow!"
+            },
+            {
+              "post_id": "5062916726588925",
+              "content": "是不是我不上学，就什么都不配，我拖延症，就什么都不是。是不是生病只是我懦弱的借口。我现在没有任何配得感，家里蹲让我失去所有价值，我觉得我什么都不是，什么都不配。因为我的病已经好多了，但我还是什么都不做，我自甘堕落，这就是我的错。",
+              "score": 0.9998,
+              "content_en": "Is it that if I don't go to school, I don't deserve anything? My procrastination makes me nothing. Is getting sick just an excuse for my weakness? Right now I have no sense of worth. Being a homebody has taken away all my value. I feel like I'm nothing, I don't deserve anything. Even though my illness has improved, I still do nothing. I'm choosing to sink, and that's my fault."
+            },
+            {
+              "post_id": "4770596976856479",
+              "content": "我很难受的时候就会给家人买东西，尤其是给我妈，我觉得我难受是因为自己太弱，弱到来人间凑数的，毫无价值感可言。",
+              "score": 0.9998,
+              "content_en": "When I feel really bad, I tend to buy things for my family, especially for my mom. I think my discomfort comes from feeling too weak, weak enough to just be here by accident, with no sense of value at all."
+            }
+          ],
+          "label_en": "Worthlessness_and_guilty",
+          "label_cn": "无价值感/内疚感"
+        },
+        "avoidance_of_stimuli": {
+          "n_posts_in_dataset": 21741,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4813491066635194",
+              "content": "很悲伤的时候，我会大哭一场指望能把情绪发泄掉，但反而引起惊恐发作，那种濒s感更痛苦，随之带来更多躯体症状。导致现在我哪怕很难过，也不敢再放肆地哭了，害怕惊恐发作。唉，突然间觉得自己怎么活成这样，连想哭就哭的自由都没有了。大家有什么发泄情绪或者转移注意力的办法呢？",
+              "score": 0.9972,
+              "content_en": "When I'm really sad, I used to cry a lot hoping to release my emotions, but it actually triggered panic attacks. The feeling of almost dying is even more painful, and it brings more physical symptoms. Now, even when I'm really upset, I don't dare to cry freely anymore, afraid of having a panic attack. Ugh, suddenly I feel like I've become this way, losing the freedom to cry whenever I want. Anyone have ways to release emotions or distract themselves?"
+            },
+            {
+              "post_id": "4611874472070942",
+              "content": "我好像看不得抑郁症这几个字了，就连看到别人说自己的经历也不行，我害怕自己会想起其实我的内心还没好，只是我选择把它埋起来不要看不要想，就像现在，我有点难受了，所以，去洗澡了，等会就忘了！！！！！！",
+              "score": 0.9987,
+              "content_en": "I can't stand seeing the words \"depression\" anymore, not even when people talk about their own experiences. I'm scared I'll remember that my heart hasn't really healed yet, and I just keep pushing it away, not looking or thinking about it. Right now, I'm feeling a bit uneasy, so I'm going to take a shower. I'll forget about it soon!!!"
+            },
+            {
+              "post_id": "5059348974535859",
+              "content": "脑子似乎在刻意遗忘那些痛苦的过往。。是脑子在保护我吗。。可是我不能忘。。每次一忘我就会好像什么都没发生过一样跟他们其乐融融。。这很危险。。对吧。。",
+              "score": 0.999,
+              "content_en": "My brain seems to be deliberately forgetting those painful pasts. Is my brain protecting me? But I can't forget. Every time I try to forget, I feel like nothing ever happened and I can happily get along with them again. That's dangerous, right?"
+            }
+          ],
+          "label_en": "avoidance_of_stimuli",
+          "label_cn": "回避创伤刺激"
+        },
+        "compensatory_behaviors_to_prevent_weight_gain": {
+          "n_posts_in_dataset": 9760,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4761296220717475",
+              "content": "我不饿，却很想吃东西，也许是心情躁郁。本来就不是胃口很大的人。煮了一包螺蛳粉，吃到一半吃不下了，可是不舍得硬撑着又吃了一点，结果过了一个小时胃很不舒服，又过了一会儿还是很难受。最后跑到厕所催吐胃才好受一些。仅仅过了两个小时不到，我又想吃东西了，可是我明明知道我不饿。",
+              "score": 0.9979,
+              "content_en": "I'm not hungry, but I really want to eat. Maybe it's mood swings. I'm not someone with a big appetite to begin with. I cooked a pack of luosimifen, ate half of it, but couldn't finish. I didn't want to force myself, so I had a little more. An hour later, my stomach felt really uncomfortable, and after a while, it was still really bad. Finally, I ran to the bathroom and vomited, and then my stomach felt a bit better. Less than two hours later, I wanted to eat again, but I knew I wasn't hungry."
+            },
+            {
+              "post_id": "4583271151969325",
+              "content": "一个人，点了两份面，一份炸酱面，一份清汤面，还把小吃街所有想吃的小吃都买回来了，一边看韩剧，一边吃，最后撑到吐，吐完，趴在马桶盖上，笑着哭，这就是我与孤独对抗的自虐方式吧。",
+              "score": 0.9988,
+              "content_en": "one person ordered two bowls of noodles, one was zhashang noodles, the other was clear soup noodles, and also bought all the street snacks they wanted to eat. they watched a korean drama while eating, and eventually got so full they threw up. after vomiting, they lay on the toilet seat, crying with a smile. this is how i fight loneliness through self-harm."
+            },
+            {
+              "post_id": "5068544459146234",
+              "content": "晚上控制不住的吃甜食 已经吐出去许多 又出去暴走 回来揉肚子压腿按穴位全用上了 结果但现在还是没消化 呵呵 自作孽 刚刚正常吃饭了一天又开始不能吃饭了 别人都是减肥导致的暴食 只有我是因为消化不了食物 又要没有力气了 掉到70多斤 还能往下掉吗 赶紧结束吧 我厌恶不能正常吃饭上厕所",
+              "score": 0.9987,
+              "content_en": "i couldn't help but eat sweets all night, threw up a lot, then went out for a run, came back and did all sorts of things like massaging my stomach, stretching, and pressing acupoints. but now i still can't digest anything. haha, it's all my own fault. i had a normal meal today and now i can't eat again. everyone else binges because of weight loss, but for me it's because i can't digest food. i'm getting so weak, dropped down to over 70 pounds, can it go any lower? i need to end this. i hate not being able to eat normally or go to the bathroom."
+            }
+          ],
+          "label_en": "compensatory_behaviors_to_prevent_weight_gain",
+          "label_cn": "代偿行为"
+        },
+        "compulsions": {
+          "n_posts_in_dataset": 1522,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4447906167460674",
+              "content": "我不知道我是不是强迫症，这些症状是我从上个月才开始的。我每天下班回来之后，进门第一件事就是洗手，洗完了之后用纸巾擦干，才刚把纸扔进垃圾桶，又开始怀疑自己没洗手，然后又重新洗手，反反复复的，总是怀疑自己，每天不知道要洗多少次手，我真的快崩溃了！",
+              "score": 0.9995,
+              "content_en": "I don't know if I have OCD, but these symptoms started only last month. Every day after work, the first thing I do when I get home is wash my hands. After washing, I use toilet paper to dry them, and just as I throw the paper into the trash, I start doubting myself again—did I really wash my hands? Then I wash them again. It keeps happening over and over. I always doubt myself, and every day I don't know how many times I have to wash my hands. I'm really about to break down!"
+            },
+            {
+              "post_id": "4734330712884995",
+              "content": "喜欢不停地洗手，手都洗烂了，可是还是控制不住自己，还是想洗手。而且必须用沐浴露洗手。怎么办？我粗略地算了一下，一天大概洗一百次手。好崩溃！",
+              "score": 0.9989,
+              "content_en": "I can't stop washing my hands, they're all cracked up, but I can't help it, I just want to wash them again. And I have to use body wash. What do I do? I roughly counted, and I wash my hands about a hundred times a day. I'm so崩溃!"
+            },
+            {
+              "post_id": "4981157286122241",
+              "content": "我真觉得强迫的思维和行为是会一步一步体现在越来越细枝末节的事情上上小学的时候是害怕传染病反复洗手，后来是反复检查，再后来是极度厌恶公厕，然后是反复阅读以保证完全记忆和理解，到现在已经开始控制使用手机的力度和控制眨眼了 以前的问题没有消失，只是不断叠加。",
+              "score": 0.9979,
+              "content_en": "I really feel that forced thoughts and behaviors show up step by step in more and more trivial things. In elementary school, I was afraid of infections and washed my hands repeatedly. Later, it became checking things repeatedly. Then I developed an extreme aversion to public restrooms. After that, I started reading things over and over to make sure I remembered and understood them completely. Now I've started controlling how hard I use my phone and how often I blink. The old problems haven't gone away, they just keep adding up."
+            }
+          ],
+          "label_en": "compulsions",
+          "label_cn": "强迫行为"
+        },
+        "diminished_emotional_expression": {
+          "n_posts_in_dataset": 13779,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4445814619778836",
+              "content": "我已经记不清楚上次开怀大笑是什么时候了，好久好久没有感受过肆无忌惮笑的那个感觉了。现在少有的笑脸自己看不到，却也能感觉到那到底有多虚伪。",
+              "score": 0.9996,
+              "content_en": "I can't remember the last time I laughed heartily, it's been so long that I've forgotten what it feels like to laugh without any restraint. Now, the rare smiles I have are ones I can't see, but I can still feel just how fake they are."
+            },
+            {
+              "post_id": "4820981320784538",
+              "content": "现在已经可以不动声色，面无表情，没有理由的就流出眼泪。只是坐着，就哭出来了。我真的不知道该怎么办。我到底该怎么办才可以开心起来啊。",
+              "score": 0.9994,
+              "content_en": "Now I can stay calm, expressionless, and just start crying without any reason. I just sit there, and suddenly I'm crying. I really don't know what to do. I just want to know, how can I get happy again?"
+            },
+            {
+              "post_id": "5012483780381334",
+              "content": "很明白为什么不回家，我重度的时候也被希望不要回家让老人担心，希望我尽量避开，因为好几次回去都抑制不住病情发作直接失声痛哭，那是根本忍不住的生理反应，所以最后就不回去了。一整年没有见过家人也没办法。",
+              "score": 0.9992,
+              "content_en": "I completely understand why I don't go back home. When I was in a severe episode, I also wanted to avoid going back because I didn't want to worry my family. I tried to stay away as much as possible, because several times when I did return, I couldn't control my condition and would break down in tears, it was a completely uncontrollable physical reaction. So in the end, I just didn't go back. Not seeing my family for an entire year was just something I had to deal with."
+            }
+          ],
+          "label_en": "diminished_emotional_expression",
+          "label_cn": "情绪表达减少"
+        },
+        "do_things_easily_get_painful_consequences": {
+          "n_posts_in_dataset": 12238,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5104096533282821",
+              "content": "酒量好点也很烦，我讨厌喝酒，但太痛苦的时候没有办法发泄，只能靠喝醉酒大哭一场，但是酒量越来越好，喝了很多就是喝不醉的感觉真的很崩溃，很想把所有药都吃掉。但是，不能。我儿子说，我想一个人去旅游的话，最多离开半个月，再久了不行。",
+              "score": 0.9995,
+              "content_en": "Having a good alcohol tolerance is annoying. I hate drinking, but when things get too painful, I can't find any other way to release myself except to get drunk and cry. But as my tolerance gets better, the feeling of drinking a lot and still not getting drunk is really crushing. I really want to take all the pills. But I can't. My son said, if I want to go traveling alone, I can leave for at most two weeks, any longer and it's not possible."
+            },
+            {
+              "post_id": "5025690226001574",
+              "content": "最近我发现我自残行为好像有点成瘾了，不是……就是撞墙，睡眠不好，其他都还好让我感觉自己是正常的，就是天天躺着，没有出去找工作的动力，好痛苦！",
+              "score": 0.9993,
+              "content_en": "Recently I've noticed my self-harming behavior seems to be getting addictive, like hitting my head against the wall. I don't sleep well, but everything else is okay, which makes me feel normal. I just lie around all day, with no motivation to go out and look for a job. It's really painful!"
+            },
+            {
+              "post_id": "4748071906576454",
+              "content": "我想自残。有时候觉得精神上痛苦，就残害自己的身体，这样精神就没那么难受了。我最近经常打自己，手上都青了。之前一直不敢使用刀，但今天特别想来一刀。我忍住了，因为会被看出来。还是打自己吧。",
+              "score": 0.9993,
+              "content_en": "I want to self-harm. Sometimes when I feel mentally painful, I hurt my body, and that makes my mind less painful. I've been hitting myself a lot lately, my hands are already bruised. I used to be too scared to use a knife, but today I really wanted to take one out. I held back because I didn't want people to notice. I'll just hit myself instead."
+            }
+          ],
+          "label_en": "do_things_easily_get_painful_consequences",
+          "label_cn": "鲁莽/自我毁损行为"
+        },
+        "drastical_shift_in_mood_and_energy": {
+          "n_posts_in_dataset": 9836,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4998910902277413",
+              "content": "双相的症状是什么啊?我现在感觉自己一会儿高兴，一会难过的。",
+              "score": 0.9998,
+              "content_en": "What are the symptoms of bipolar disorder? I feel happy one moment and sad the next."
+            },
+            {
+              "post_id": "4646696426409560",
+              "content": "今天睡过头了，直接翘班了。反正也不想上班。迷迷糊糊睡到下午1点，然后起来打游戏。什么都没吃。亲友发红包，我点了两大杯奶茶。真过瘾啊。今天也还是亢奋的情绪。可是亢奋一阵就会进入低落状态。低落一阵又开始亢奋。像个神经病一样。哈。哎。明天去复诊吧。跟医生说说。哎。",
+              "score": 0.9992,
+              "content_en": "I overslept today and skipped work altogether. Honestly, I didn't feel like going in the first place. I slept until 1pm, half-asleep, then just played games all day. Didn't eat anything. My friends sent me red envelopes, and I ordered two big cups of milk tea. It was so satisfying. Today I was still in a high mood. But the high would fade into a low, and then the low would turn back into a high. It's like I'm going crazy. Haha. Ugh. I'll go for my follow-up appointment tomorrow and talk to the doctor. Ugh."
+            },
+            {
+              "post_id": "4605698338463940",
+              "content": "我基本上每天要在抑郁期和躁狂期循环两次，多了三次四次也有，我的情况好像比较难治愈，感觉主治医生不怎么愿意给我治。",
+              "score": 0.9993,
+              "content_en": "I basically cycle between depressive and manic episodes twice a day, sometimes three or four times. My situation seems really hard to treat, and I feel like my main doctor isn't very willing to help me."
+            }
+          ],
+          "label_en": "drastical_shift_in_mood_and_energy",
+          "label_cn": "情绪与精力显著波动"
+        },
+        "fear_about_social_situations": {
+          "n_posts_in_dataset": 13036,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4645651906297926",
+              "content": "为什么我一个朋友都没有，我不懂怎么和人维持关系，和任何陌生人独处会很紧张。在家也不喜欢和家人沟通，我到底怎么了，我好孤单但又不想去改变。",
+              "score": 0.9998,
+              "content_en": "why do i have no friends? i don't understand how to maintain relationships, and i get really anxious when being alone with strangers. i also don't like talking to my family at home. what's wrong with me? i feel so lonely but i don't want to change anything."
+            },
+            {
+              "post_id": "5099197886368102",
+              "content": "白天害怕出门，晚上崩溃大哭，情绪越来越不受控制，总想伤害自己或就此消失；有时候一天只吃一顿饭，然后躺在床上一动不动，什么也不想干；一想到这些年来自己的委屈和压抑、难过，还有前面所说的那些事情，我的眼泪就会像开关坏掉的水龙头一般流个不停，心脏感觉像被绳子绑着一样越抽越紧。",
+              "score": 0.9997,
+              "content_en": "I’m scared to go out during the day, and I break down and cry at night, my emotions getting more out of control every day. I keep thinking about hurting myself or just disappearing. Sometimes I only eat one meal a day and then lie in bed not moving, not wanting to do anything. Every time I think about all the委屈 and pressure and sadness I’ve been through, along with all those things I mentioned before, my tears just flow like a broken faucet, and my heart feels like it’s being tied with ropes, getting tighter and tighter."
+            },
+            {
+              "post_id": "4563998408182488",
+              "content": "发现自己又不自主咬紧牙齿的时候，我好慌呀，我感觉我在坠落，我和别人呆一天，浑身力气都没有了，嗷，还是不适合外出，不适应和别人交流。",
+              "score": 0.9997,
+              "content_en": "When I realize I'm clenching my teeth again without realizing it, I get so panicked. I feel like I'm falling. Just being with people for a day leaves me completely drained. Ugh, I guess I'm still not suitable for going out, not ready to interact with others."
+            }
+          ],
+          "label_en": "fear_about_social_situations",
+          "label_cn": "社交情景恐惧/回避"
+        },
+        "fear_of_gaining_weight": {
+          "n_posts_in_dataset": 16338,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4710035663358772",
+              "content": "外貌焦虑和身材焦虑真的能逼疯一个人。前天遇到我的一个很久没见的老师，说我变胖了一些。自己回去提了一嘴想要减肥，下午买饭的时候每当我要按照我的喜好买的时候身边就会说你不减肥了啊，哎呀你都胖成啥样了。这几天每天晚上都没有吃饱过，每到晚上就饿疯狂灌水，吃东西也会被说吃完了也会被说。",
+              "score": 0.998,
+              "content_en": "External appearance anxiety and body shape anxiety can really drive someone crazy. The day before yesterday, I ran into an old teacher I hadn't seen in a while, and they said I had gained some weight. I mentioned to myself that I wanted to lose weight, and then when I went to buy lunch, every time I tried to order according to my own preferences, people around me would say, \"Oh, you're not trying to lose weight anymore?\" \"Oh my god, how fat you've gotten.\" For these few days, I haven't eaten enough every night. Every evening I get super hungry and just drink a lot of water. Even when I eat, I get criticized if I finish my food, and I get criticized if I don't."
+            },
+            {
+              "post_id": "5033864368227432",
+              "content": "我要怎么做才能够开心呢，我吃了好多东西，一边吃一边愧疚，我又要胖了，妈妈还叫我不要点外卖，家里又没有吃的，是不是要我饿死才好。我不开心的时候就喜欢吃东西，其实吃撑的时候特别难受，吃完了想到自己会胖也很难受，只有在吃的时候是开心的。我不想再胖了，如果可以的话。",
+              "score": 0.9954,
+              "content_en": "i don't know how to be happy anymore. i eat a lot, feeling guilty as i eat, knowing i'm going to get fatter. my mom told me not to order takeout, but there's nothing to eat at home. is it okay if i starve myself? when i'm sad, i just want to eat. but when i'm full, it's really uncomfortable, and after eating, thinking about getting fat makes me feel bad too. the only time i feel happy is when i'm eating. i don't want to get fat anymore, if it's possible."
+            },
+            {
+              "post_id": "4964788092276867",
+              "content": "最近突然胖了10斤，不知道和吃抗抑郁药有没有关系。因为体重涨的太迅速了，腿上都有肥胖纹了我以前是跳舞的，体重一直有在控制。现在突然这样子让我有些无法接受，感觉自己变得好丑。",
+              "score": 0.9947,
+              "content_en": "I gained 10 pounds recently out of nowhere, and I'm not sure if it's related to the antidepressants I'm taking. The weight gain happened so fast that I even got stretch marks on my legs. I used to be a dancer and always kept my weight in check. Now this sudden change is really hard to accept. I feel like I've become so ugly."
+            }
+          ],
+          "label_en": "fear_of_gaining_weight",
+          "label_cn": "体重增加恐惧"
+        },
+        "fears_of_being_negatively_evaluated": {
+          "n_posts_in_dataset": 2925,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4762858350975246",
+              "content": "难以压制的，生病的羞耻感。怕被更多人知道我有这个病而另眼看待我。怕那些已经知道了的好朋友们，如果有时我某些地方做的令她们不满意，她们会偷偷说，果然有抑郁症的人很奇怪。我怕他们因为我，觉得果然不该和抑郁症的人做朋友。开始后悔让她们知道。但是，一直对所有人隐瞒，我又很有罪恶感。",
+              "score": 0.9995,
+              "content_en": "Hard to suppress, the shame of being sick. I'm afraid more people will find out I have this illness and look at me differently. I'm afraid of my good friends who already know. Sometimes if I do something that doesn't meet their expectations, they might whisper, \"Oh, people with depression are really strange.\" I'm scared they'll think, because of me, they shouldn't have been friends with someone with depression. I start to regret telling them. But keeping it a secret from everyone else makes me feel guilty."
+            },
+            {
+              "post_id": "4810359896545297",
+              "content": "好难过，大家都去上学了我真的会很害怕，他们的眼神，他们说的每一句话，我连站在学校外面都会害怕。",
+              "score": 0.9993,
+              "content_en": "I'm really sad, everyone else is going to school and I get really scared, their looks, every word they say, I get scared just standing outside the school."
+            },
+            {
+              "post_id": "4760075477193267",
+              "content": "不想再当好人了，不想再消息秒回，免费帮人做苦力，虽然被人信任的感觉很好，但我不信任任何人。我想把他们都推开，我甚至不敢让别人知道病情，怕他们同情我，也怕他们眼神的躲闪。我觉得我不应该耽误别人，也不想让他们想起我都没有好的回忆，所以我是不是应该消失了。",
+              "score": 0.9991,
+              "content_en": "I don't want to be the good person anymore, I don't want to reply to messages instantly, or do free hard labor for others. Although being trusted feels good, I don't trust anyone. I want to push them all away. I even dare not let others know about my condition, afraid they will pity me, and afraid of their shy looks. I feel I shouldn't burden others. I don't want them to remember me with bad memories. So, should I just disappear?"
+            }
+          ],
+          "label_en": "fears_of_being_negatively_evaluated",
+          "label_cn": "负性评价恐惧"
+        },
+        "flight_of_ideas": {
+          "n_posts_in_dataset": 3905,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4832285154869526",
+              "content": "上次医生问我 有没有情绪很高昂思维很跳跃 说话停不下来的时候 一个想法一个想法的往外冒 我否定了。但是现在我就在这样。我不应该否定的。我确实有。",
+              "score": 0.9897,
+              "content_en": "Last time the doctor asked me if I ever felt really high-energy, with my thoughts racing and talking nonstop, ideas coming out one after another, I said no. But now I'm exactly like that. I shouldn't have denied it. I really do."
+            },
+            {
+              "post_id": "4610181449646107",
+              "content": "自行断药好久了，从一开始诊断抑郁，到双向。我也不知道我到底好没好，有时候不想说话，有时候脑子转的特别快，说话也快，还特别想花钱。我不想吃药，一吃药我总在睡觉，昏昏沉沉的。我只要一个人呆着我就会胡思乱想，内心也特别脆弱，还自卑。也不知道什么时候变成了极端的性格。",
+              "score": 0.9992,
+              "content_en": "I've been stopping my medication for a long time now, since the first time I was diagnosed with depression, then bipolar. I don't even know if I'm really better anymore. Sometimes I don't want to talk, sometimes my mind is moving super fast, I talk fast, and I just want to spend money a lot. I don't want to take medicine anymore, because once I do, I just keep sleeping, feeling really drowsy and foggy. When I'm alone, I start thinking too much, my inner self is really fragile and I feel really insecure. I don't know when I became so extreme."
+            },
+            {
+              "post_id": "5077071831500189",
+              "content": "住院期间出差了，以为这几天输液吃药效果挺好的，就想没再买药，昨天停药一天，要命了，昨晚一夜没睡，脑子里胡思乱想，天马行空，控制不住，早上起来精神状态极差，还见客户，他妈的要死了，明天上午见一个客户，下午返回了，星夜兼程也得回去，去医院，现在我还是住院阶段。",
+              "score": 0.9971,
+              "content_en": "I was on leave during my hospital stay, thinking that the IV and medication were working well, so I didn't buy any more pills. Yesterday I skipped a day of medication, and it was a disaster. I couldn't sleep all night, my mind was full of random thoughts, wild and uncontrollable. This morning I felt completely drained, and I still had to meet a client. Christ, I'm dying. I have a client meeting tomorrow morning, then I'll return in the afternoon. I'll have to travel all night to get back, and I'm going to the hospital now. I'm still in the hospital phase."
+            }
+          ],
+          "label_en": "flight_of_ideas",
+          "label_cn": "思维奔逸"
+        },
+        "intrusion_symptoms": {
+          "n_posts_in_dataset": 9601,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5025402085703726",
+              "content": "感觉自己快疯了在黑夜当所有人开始了无生息的时候突然惊醒就把自己也排除在外了不知道心情怎么回事，身体怎么回事是要出现什么问题了吗，告诉我精神仿佛在不断闪回昨天或以前的心情场景似乎在无边的黑暗里一直往下坠（被赋予了害怕）精神似乎独立着往一个方向一直撞着好像快疯了。",
+              "score": 0.9992,
+              "content_en": "I feel like I'm going crazy in the night when everyone else starts to become lifeless, and suddenly I wake up, pushing myself out of the group. I don't know what's wrong with my mood, or my body, is something going to happen? Tell me, my mind keeps flashing back to scenes from yesterday or before, as if I'm falling endlessly into an endless darkness (filled with fear). My mind feels like it's going in one direction, crashing into something, and I'm about to lose it."
+            },
+            {
+              "post_id": "4600732952821783",
+              "content": "为什么每一次闭眼的时候都要想一些不好的事情？为什么我每天晚上闭眼之前，我都会想起小时候所有不好的事情，每次想入睡的时候，大人打我的瞬间又浮现在我的眼前。为什么最近几天画面更加严重了？",
+              "score": 0.999,
+              "content_en": "why every time i close my eyes, i have to think about bad things? why every night before i go to sleep, i keep recalling all the bad things from my childhood, and every time i try to fall asleep, the moment when my parents hit me flashes in my mind. why have these images become more intense in the past few days?"
+            },
+            {
+              "post_id": "4684548945740484",
+              "content": "好好地又冲进来一个侵入性思维，来不及控制。那样一个画面，又把我心情搞糟。哎。简直是救命啊，我是造了什么孽一天天跟这些东西周旋。",
+              "score": 0.9972,
+              "content_en": "Another intrusive thought just stormed in, and I couldn't stop it. That image messed up my mood again. Ugh. It's really saving me, I wonder what I did wrong to keep dealing with these things every day."
+            }
+          ],
+          "label_en": "intrusion_symptoms",
+          "label_cn": "侵入性症状"
+        },
+        "loss_of_interest_or_motivation": {
+          "n_posts_in_dataset": 8037,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5026713455298680",
+              "content": "我觉得我真的要崩溃了。现在的我，什么都不想干，对任何事情都没有兴趣。以前喜欢的兴趣爱好，甚至我现在连刷视频，打游戏，我都不想干。只觉得心里空落落。分开的朋友，未曾拥有的爱情，还有关系一直一般的父母。我的心里是没有依靠的，现在对什么都不感兴趣。也没有精神上的依靠。",
+              "score": 0.9999,
+              "content_en": "i really feel like i'm about to break down. right now, i don't want to do anything, and i have no interest in anything. the hobbies i used to love, even things like watching videos or playing games, i don't want to do anymore. it just feels empty inside. my ex-friend, the love i never had, and my parents who always had a general relationship with me. my heart has no support, and now i have no interest in anything. there's also no emotional support."
+            },
+            {
+              "post_id": "4698297527173928",
+              "content": "住院第七天，昨天忘记打卡了，由于自己什么感兴趣的事都没有，看什么都不真实，所以手机拿的少之又少，今天我依旧很难受阿，精神状态还是很不好，住了这几天仍然没有半点改善，我有些想出院了，待的心慌。",
+              "score": 0.9998,
+              "content_en": "Day seven in the hospital, I forgot to check in yesterday. Since I don't have anything I'm interested in, everything looks unreal, so I hardly touch my phone. Today I'm still really uncomfortable, my mental state is still terrible, and there's been no improvement even after these days. I'm starting to want to leave, I feel anxious just being here."
+            },
+            {
+              "post_id": "4914146472626378",
+              "content": "发工资没有开心，购物没有开心，吃东西也没有开心，我觉得自己真的要废了，对什么都不感兴趣。当一个人对所有事情都没兴趣的时候，基本也就是走到头了。",
+              "score": 0.9998,
+              "content_en": "Got paid and wasn't happy, shopping didn't make me happy, eating nothing made me happy either. I feel like I'm really going to be useless, not interested in anything. When someone loses interest in everything, it's basically the end."
+            }
+          ],
+          "label_en": "loss_of_interest_or_motivation",
+          "label_cn": "兴趣减退/快感缺失"
+        },
+        "more_talktive": {
+          "n_posts_in_dataset": 8641,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5120312411164673",
+              "content": "其实我经常反思我自己，我有的时候说话口无遮拦，我跟人说话要么一句话不说，要么喋喋不休，重复个没完。我的朋友都说我像一台机械不像是人。我的行为也很像机械，我也不是一直都要追责霸凌我的那两个学生，但是的确是他们传出的那么多谣言。",
+              "score": 0.9982,
+              "content_en": "I often reflect on myself, sometimes I speak without thinking, either saying nothing at all or talking nonstop, repeating myself endlessly. My friends say I'm like a machine, not like a person. My behavior is also mechanical. I'm not always holding onto the blame for those two students who bullied me, but it's definitely because of the rumors they spread."
+            },
+            {
+              "post_id": "4573052703087334",
+              "content": "完了，我真的感觉完了，一亢奋起来就不停不停地说话，根本不管别人，听不进去别人说话，心跳加快，就差蹦起来了。怎么控制的住？",
+              "score": 0.9981,
+              "content_en": "Done, I really feel like I'm done. Once I get excited, I just keep talking nonstop, not caring about anyone, not listening to others, my heart races, I'm about to jump out of my skin. How can I control this?"
+            },
+            {
+              "post_id": "4662438903941987",
+              "content": "我现在神经异常兴奋，有点不对了，感觉像喝了酒一般，大脑活跃度已经让安静的我变成了话痨了！咖啡☕️到底是个祸害人的东西！",
+              "score": 0.9953,
+              "content_en": "I'm currently experiencing abnormal excitement, feeling a bit off, like I've been drinking alcohol. My brain is so active that it's turned quiet me into a chatterbox! Coffee ☕️ is really a harmful thing!"
+            }
+          ],
+          "label_en": "more_talktive",
+          "label_cn": "多语/言语迫促"
+        },
+        "obsession": {
+          "n_posts_in_dataset": 9807,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5035893161200081",
+              "content": "强迫症和被迫害妄想症有联系吗？我个人感觉我自己的症状就是强迫症和被迫害妄想症这俩混在一起的。",
+              "score": 0.9997,
+              "content_en": "Is there a connection between OCD and paranoid delusions? Personally, I feel like my symptoms are a mix of both OCD and paranoid delusions."
+            },
+            {
+              "post_id": "4705763891086198",
+              "content": "比如我强迫自己重复去想去做强迫动作的时候，中间如果想到一个讨厌的人，我必须在强迫自己重复想，如果不去重复想，就感觉自己一举一动，吃什么，玩手机，都是那个人的，自己也感觉自己不是自己了，必须重复想的时候过程中没有想到讨厌的人，才能缓解这种想法，有没有这种情况的！",
+              "score": 0.9997,
+              "content_en": "For example, when I force myself to repeat thoughts that I want to do compulsive actions, if I think of someone I hate in the middle, I have to force myself to keep repeating the thought. If I don't repeat it, I feel like every single thing I do—what I eat, what I do on my phone—is controlled by that person. I feel like I'm not myself anymore. Only when I manage to repeat the thought without thinking of that person can I ease the feeling. Has anyone experienced this?"
+            },
+            {
+              "post_id": "4882059501509931",
+              "content": "你们有没有强迫过去痛苦的经历人和事的，然后又强迫想好多遍，比如想到一个不好的人，我会想一个不讨厌的人或者明星的样子去对抗，如果过程中想到其他不好的想法，又要强迫自己再去想讨厌的人，在想不讨厌的人，有没有这种症状的！",
+              "score": 0.9996,
+              "content_en": "Have you ever forced yourself to think about past painful experiences or people, and then kept thinking about them over and over? Like, when I think about someone I don't like, I try to imagine someone I don't mind or a celebrity to counteract it. But if other bad thoughts pop up in the middle, I have to force myself to go back to thinking about the person I dislike and then switch back to the person I don't mind. Do you have this symptom too?"
+            }
+          ],
+          "label_en": "obsession",
+          "label_cn": "强迫观念"
+        },
+        "panic_fear": {
+          "n_posts_in_dataset": 11093,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5064566557901189",
+              "content": "我之所以追星，是因为他让我有了个精神支柱有了一个活着的理由。让我不断告诉自己，我必须活着我还有事情没做完。可是最近粉圈变得好乱，让我的情绪也变得好乱，好像带给我的感觉已经不一样了。以前我在粉圈感受到的是安心和开心，现在却是惊恐和慌张了，今天吃了药也依旧没有平复下来。",
+              "score": 0.999,
+              "content_en": "I started following this idol because he gave me a spiritual support and a reason to keep living. He made me keep telling myself that I have to live, that there are things I still need to finish. But lately, the fan circle has gotten so chaotic, and my emotions have become really unstable too. It feels like the feeling he gives me has changed. Before, I used to feel safe and happy in the fan community, but now I feel scared and panicked. I took my medication today, but I still can't calm down."
+            },
+            {
+              "post_id": "4945674530718015",
+              "content": "又发作忍不住又哭了，我真的好废。莫名其妙就发作，头痛心慌害怕，恐惧涌上整个大脑，瞬间坐立不安。",
+              "score": 0.9967,
+              "content_en": "Another episode hit and I couldn't help but cry again, I really feel so useless. It happened out of nowhere, with a headache, palpitations, fear, and panic flooding my whole brain. I suddenly felt restless and couldn't sit still."
+            },
+            {
+              "post_id": "4694000835494301",
+              "content": "长期活在一种惊恐中，差不多就是被踩了尾巴的流浪猫的反应，那条无形的尾巴时不时被踩一脚，我好害怕，为什么会这样？",
+              "score": 0.9962,
+              "content_en": "Living in a constant state of panic for a long time is like the reaction of a stray cat whose tail gets stepped on. That invisible tail gets stepped on every now and then, and I'm so scared. Why is this happening?"
+            }
+          ],
+          "label_en": "panic_fear",
+          "label_cn": "惊恐恐惧"
+        },
+        "pessimism": {
+          "n_posts_in_dataset": 13542,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4693814440101651",
+              "content": "我不配拥有世界上的美好。发生在我身上的，只有背叛、欺骗、不理解、不耐烦。我有太多的负面情绪，每天要控制他们不外露，却在随时随地把他们渗透给身边的人，包括现在。我真是个废物。",
+              "score": 0.9999,
+              "content_en": "I don't deserve the beauty in this world. All that happens to me is betrayal, deception, lack of understanding, and impatience. I have so many negative emotions, and every day I try to keep them hidden, but I let them seep into the people around me, including now. I'm such a waste."
+            },
+            {
+              "post_id": "4961924179036993",
+              "content": "我感觉我病了好厌弃现在颓废的自己那个心思逐渐脱离正轨的自己愈发觉得前途灰暗好烦躁好迷茫有一种控制不住自己的空虚感各位有什么建议………吗？",
+              "score": 0.9998,
+              "content_en": "i feel like i'm really sick of myself right now, hating the way i've become so颓废. the part of me that's drifting off track feels more and more hopeless, my future looks so dark, i'm so frustrated and lost, there's this uncontrollable emptiness inside me. anyone have any advice...?"
+            },
+            {
+              "post_id": "4403292530813484",
+              "content": "我感觉我的未来毫无希望，想到我可能上班上到死，我就感到糟糕。",
+              "score": 0.9998,
+              "content_en": "I feel like my future has no hope, and just thinking about maybe working until I die makes me feel really bad."
+            }
+          ],
+          "label_en": "pessimism",
+          "label_cn": "悲观"
+        },
+        "poor_memory": {
+          "n_posts_in_dataset": 6279,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4922021694149474",
+              "content": "我好热。在家看了一年多书了，除了考试没出过门，感觉记忆力越来越差，思维迟钝。昨天刷了一天题越写越崩溃，想网上挂个号去看看，我妈走进我屋里发现我没在看书，说我又一直玩手机。然后我睡不着，通宵看了一晚上书，讲真的效率为零，三四个小时一套卷子都没做完，一直昏昏沉沉，胃难受。",
+              "score": 0.9998,
+              "content_en": "I'm so hot. I've been studying at home for over a year, only going out for exams, and I feel my memory getting worse and my thinking slower. Yesterday I spent all day doing practice problems and got more and more frustrated. I wanted to book an online appointment to see a doctor, but my mom walked into my room and found me not studying, saying I've been on my phone all the time. Then I couldn't sleep and stayed up all night studying. Honestly, my efficiency was zero. I didn't finish a set of practice papers in three or four hours, and I was constantly dazed and confused, with a sore stomach."
+            },
+            {
+              "post_id": "5077541183820597",
+              "content": "都快上床了才想起自己还有几百个字的实训报告没有写，健忘症也越来越严重，那点为数不多的记忆力全用来记我的黑历史和丑事了。做事情上一秒还记得要去做，下一秒就忘了要做什么，然后别人还一直以为我做事情不上心，其实真的不是啊，是真的记忆差到不行。",
+              "score": 0.9997,
+              "content_en": "I almost went to bed and then remembered I still had hundreds of words left for my practical report, my forgetfulness is getting worse. The little memory I have is all used up remembering my black history and embarrassing stuff. I remember what I need to do one second, then forget the next. People always think I don't take things seriously, but it's not that I don't care, it's just my memory is so bad."
+            },
+            {
+              "post_id": "4846953072169846",
+              "content": "吃喹硫平记忆力会变差，不吃又睡不着，我的脑子注定变得更废让我想鼠。依赖安眠药好几年，记忆力早就坏了。",
+              "score": 0.9997,
+              "content_en": "Taking quetiapine makes my memory worse, but not taking it leaves me unable to sleep. My brain is destined to get worse, making me want to commit suicide. I've been dependent on sleeping pills for years, and my memory is already ruined."
+            }
+          ],
+          "label_en": "poor_memory",
+          "label_cn": "记忆损害"
+        },
+        "sleep_disturbance": {
+          "n_posts_in_dataset": 45074,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4429990009461194",
+              "content": "半夜十二点多了，室友都睡下了，我睡不着。刷着无聊的新闻。感觉除了被窝里暖和一点。夜里静的让人心慌。下午的时候，睡觉的时候突然就哭了。莫名的伤感，给自己设想了很多总意外。任何人跟我在一起都没有安全感。我不知道啥时候会彻底崩溃。",
+              "score": 1.0,
+              "content_en": "Past midnight, my roommate's all asleep, but I can't fall asleep. I'm scrolling through boring news. The only thing keeping me warm is the blanket. The night is so quiet it makes me anxious. This afternoon, I suddenly started crying while trying to sleep, feeling a strange sadness. I keep imagining all sorts of bad things happening. I don't feel safe with anyone. I don't know when I'll finally break."
+            },
+            {
+              "post_id": "4585142059008419",
+              "content": "这样下去我身体真的会垮的吧我真的睡不着几乎都是六七点才睡进去然后十点就醒了这两周睡眠真的差到极致我妈让医生把安眠药去掉怕我依赖但是 我真的 没办法入睡啊失眠只是一小部分而已。我真的好难受啊。",
+              "score": 0.9999,
+              "content_en": "This is really going to break my body down. I can't sleep at all. I usually fall asleep around six or seven and wake up by ten. My sleep has been terrible for the past two weeks. My mom had the doctor take away the sleeping pills because she's worried I'll become dependent, but I really can't fall asleep. Insomnia is just a small part of it. I'm really suffering."
+            },
+            {
+              "post_id": "4613848386241067",
+              "content": "睡前看书简直是治疗失眠、熬夜、睡眠质量不好等等一系列睡眠问题的良药！不管是工具书，专业书还是文学书，只要拿起书的那一刻，就开始犯困，刀架我脖子上都不见得能睁开眼，太有用了！今天居然差点睡过头了！这久违的睡意！我可太开心了！",
+              "score": 0.9999,
+              "content_en": "Reading before bed is like a miracle drug for insomnia, staying up late, poor sleep quality, and all sorts of sleep issues! Whether it's a reference book, a professional book, or a literary book, as soon as I pick it up, I start feeling sleepy. Even if someone held a knife to my neck, I wouldn't be able to open my eyes. It's super useful! Today I almost overslept! This long-lost sense of sleepiness! I'm so happy!"
+            }
+          ],
+          "label_en": "sleep_disturbance",
+          "label_cn": "睡眠障碍"
+        },
+        "somatic_muscle": {
+          "n_posts_in_dataset": 13026,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "5040993563051025",
+              "content": "上周进了抢救室手再次不受控制 抖动夹杂抽动好像回到抢救室的那个夜晚 冷白的灯光一直亮着 我终于停止了全身的抽搐 僵硬地躺在床上 左手的留置针紧紧裹着绷带 右手动脉的针孔鼓得很疼 大臂上的血压仪不时收紧好痛苦",
+              "score": 0.9997,
+              "content_en": "Last week I ended up in the emergency room again, and my hands lost control once more, shaking with twitching, as if I had returned to that night in the emergency room. The cold white lights stayed on all night. Finally, I stopped the full-body convulsions and lay stiffly in bed, my left hand wrapped tightly in a bandage from the IV. The puncture site on my right artery ached painfully. The blood pressure cuff on my upper arm kept tightening, and it was really painful."
+            },
+            {
+              "post_id": "4942618360547870",
+              "content": "昨天跟家人吵架受了点刺激，反复想这件事，然后刚才出去吃完饭回来的路上，外面也闷热，开始犯病了，濒死感来了，觉得自己要死过去了，无比难受。我现在手抖，腿软，我太痛苦了。",
+              "score": 0.9992,
+              "content_en": "Yesterday I had an argument with my family and got a bit triggered, and I kept thinking about it over and over. Then just now, after coming back from dinner, the weather was really stuffy outside, and I started having a panic attack. I felt like I was going to die, and it was so unbearable. Right now my hands are shaking and my legs are weak. I'm so painful."
+            },
+            {
+              "post_id": "4884268293294000",
+              "content": "友友们会手抖吗，我是特意定住去看自己手的时候，它好像不抖，但实际上我稍微紧张一点或者拿筷子、收拾东西的时候就很明显的在晃，在抖，也没有到拿不住东西的程度，但非常明显，就像电视里演的那种听到坏消息，害怕的手抖的那种。还会觉得手没力气。",
+              "score": 0.9991,
+              "content_en": "Friends, do you ever get shaky hands? I intentionally focused on watching my hands, and it seemed like they weren't shaking. But actually, when I get a little nervous or when I use chopsticks or do things like tidying up, they shake really clearly. It's not bad enough that I can't hold things, but it's very obvious. It's like the kind of shaking you see on TV when someone hears bad news and is scared. I also feel like my hands are weak."
+            }
+          ],
+          "label_en": "somatic_muscle",
+          "label_cn": "躯体肌肉系统症状"
+        },
+        "somatic_symptoms_others": {
+          "n_posts_in_dataset": 8257,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4975771972010560",
+              "content": "好疼啊，好烦躯体化啊，躯体化好多啊，我好难受啊。我都数不清躯体化有多少，可我的父母他们连躯体化是什么都不知道，为什么做父母不用考试呢？他们不配为人父母！",
+              "score": 0.9997,
+              "content_en": "It hurts so much, I'm so frustrated with somatization, there's so much somatization, I feel so awful. I can't even count how many somatizations I have, but my parents don't even know what somatization is. Why do parents get to be parents without taking an exam? They don't deserve to be parents!"
+            },
+            {
+              "post_id": "5057155436644286",
+              "content": "我处于一种忧郁状态。甚至有时候神志不清。我太容易冲动，病态地敏感，可以曲解最一般的事物，赋予它们另一种外观和规模。",
+              "score": 0.9996,
+              "content_en": "I'm in a depressive state. Sometimes I even lose my mind. I'm too impulsive, pathologically sensitive, and I can misinterpret the most ordinary things, giving them a completely different appearance and scale."
+            },
+            {
+              "post_id": "4448444049285855",
+              "content": "我好痛啊.. 胳膊腿头肋骨都好疼怎么抑郁症还是不他妈放过我是吗？",
+              "score": 0.9993,
+              "content_en": "I'm so painful... my arms, legs, head, and ribs all hurt. Why isn't depression just letting me go already? Is that what you mean by not letting me go?"
+            }
+          ],
+          "label_en": "somatic_symptoms_others",
+          "label_cn": "其他躯体症状"
+        },
+        "somatic_symptoms_sensory": {
+          "n_posts_in_dataset": 8075,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4920600471277211",
+              "content": "突然有一天莫名的全身发冷，浑身发颤的那种，我窝在被窝里盖了很厚的被子，还是觉得冷到不行，有种身在冰窖感觉，我一直说冷，我老公以为我感冒了，但是摸我身上，他说温度正常。一两个小时后，我又恢复正常了，不知道有没有人跟我有过一样的症状。",
+              "score": 0.9997,
+              "content_en": "One day out of the blue, I suddenly felt all over cold, shaking all over. I curled up in bed with a thick blanket, but still couldn't shake the cold, like I was in an ice cellar. I kept saying I was cold, and my husband thought I had a cold. But when he touched me, he said my temperature was normal. After an hour or two, I went back to normal. I wonder if anyone else has experienced the same thing."
+            },
+            {
+              "post_id": "4914118622971655",
+              "content": "麻烦咨询大家一下，刚开始吃药会有什么样的副作用呢？我怎么感觉我往这儿一躺，心跳加快，浑身发热，手还有点麻。",
+              "score": 0.9996,
+              "content_en": "Could you guys consult me on what side effects I might experience when I first start taking medication? I feel like as soon as I lie down, my heart starts racing, my whole body gets hot, and my hands are a bit numb."
+            },
+            {
+              "post_id": "4770533726227837",
+              "content": "膝盖里面烧的痛，下午请假去医院看了，双侧积液滑膜炎，开了很贵的膏药，还有口服药。膏药是糊糊那种，今天在医院里护士给我贴的，之后就要我寄几贴了。今天下午其实是个治愈的过程。我从上午开始流了好多好多眼泪，脸都干疼。能解决一个问题是一个吧。谢谢今天的很多事和人。我很感激。",
+              "score": 0.9995,
+              "content_en": "My knees were burning inside, so I took the afternoon off to go to the hospital. They diagnosed me with bilateral joint effusion and synovitis, and prescribed some very expensive ointment and oral medication. The ointment is a thick paste, and the nurse applied it to me in the hospital today. I’ll have to mail a few more later. Today afternoon was actually a healing process. I cried a lot starting from the morning, my face was dry and sore. Solving one problem is something. Thank you for all the things and people today. I’m very grateful."
+            }
+          ],
+          "label_en": "somatic_symptoms_sensory",
+          "label_cn": "躯体感觉系统症状"
+        },
+        "weight_and_appetite_change": {
+          "n_posts_in_dataset": 15355,
+          "n_examples": 3,
+          "examples": [
+            {
+              "post_id": "4733642481344539",
+              "content": "暴食症控制不住怎么办？我大概是因为心理问题而想用暴食来缓解，导致现在我开心也好难过也好，或者是碰见什么恶心的事，都特别想吃东西，养成了身体习惯，无论怎么都一直在暴饮暴食，吃狠了就催吐，怎么办？",
+              "score": 0.9997,
+              "content_en": "I can't control my binge eating anymore. I think it's because of some psychological issues that make me use overeating to cope. Now, whether I'm happy or sad, or even if I see something gross, I just want to eat a lot. It's become a habit, and no matter what I do, I keep bingeing and then purging. What should I do?"
+            },
+            {
+              "post_id": "4929624797092986",
+              "content": "一个月多月前换了一种药叫米氮平片，前期跟本吃不下饭吃的特别少体重一直在下降，经常挨家里面的人骂，我还挺开心的因为不像百度上说的，是种药会变胖+上我是舞蹈专业的。但是后期食欲突然增大，就一餐，真的能吃特别多的那种，怎么塞都塞不饱一天到晚都在吃现在真的不知道怎么办？",
+              "score": 0.9997,
+              "content_en": "More than a month ago I switched to a medication called Mirtazapine. In the beginning, I couldn't eat at all, I ate very little and my weight kept dropping. I was often scolded by my family, but I was actually happy because it wasn't like what I read online—this medication is supposed to make you gain weight. Plus, I'm a dance major. But later on, my appetite suddenly increased a lot. I could eat a huge meal in one sitting, and no matter how full I got, I just couldn't stop. I've been eating all day long, and now I really don't know what to do."
+            },
+            {
+              "post_id": "4433084231380654",
+              "content": "为什么只有我抑郁之后变得暴饮暴食了，别人都是厌食啊？我越来越胖了，真的烦。",
+              "score": 0.9996,
+              "content_en": "Why is it only after I got depressed that I started overeating, while everyone else just loses their appetite? I'm getting fatter and fatter, and I'm really frustrated."
+            }
+          ],
+          "label_en": "weight_and_appetite_change",
+          "label_cn": "体重与食欲改变"
+        }
+      },
+      "label_map": {
+        "Anger_Irritability": "易激惹心境",
+        "Anxious_Mood": "焦虑心境",
+        "Autonomic_symptoms": "自主神经系统症状",
+        "Cardiovascular_symptoms": "心血管系统症状",
+        "Catatonic_behavior": "紧张症行为",
+        "Decreased_energy_tiredness_fatigue": "疲惫或精力缺乏",
+        "Depressed_Mood": "抑郁心境",
+        "Gastrointestinal_symptoms": "胃肠道症状",
+        "Genitourinary_symptoms": "泌尿生殖系统症状",
+        "Hyperactivity_agitation": "多动与激越",
+        "Impulsivity": "冲动性",
+        "Inattention": "注意力不集中",
+        "Indecisiveness": "决断困难",
+        "Respiratory_symptoms": "呼吸系统症状",
+        "Suicidal_ideas": "自杀意念",
+        "Worthlessness_and_guilty": "无价值感/内疚感",
+        "avoidance_of_stimuli": "回避创伤刺激",
+        "compensatory_behaviors_to_prevent_weight_gain": "代偿行为",
+        "compulsions": "强迫行为",
+        "diminished_emotional_expression": "情绪表达减少",
+        "do_things_easily_get_painful_consequences": "鲁莽/自我毁损行为",
+        "drastical_shift_in_mood_and_energy": "情绪与精力显著波动",
+        "fear_about_social_situations": "社交情景恐惧/回避",
+        "fear_of_gaining_weight": "体重增加恐惧",
+        "fears_of_being_negatively_evaluated": "负性评价恐惧",
+        "flight_of_ideas": "思维奔逸",
+        "intrusion_symptoms": "侵入性症状",
+        "loss_of_interest_or_motivation": "兴趣减退/快感缺失",
+        "more_talktive": "多语/言语迫促",
+        "obsession": "强迫观念",
+        "panic_fear": "惊恐恐惧",
+        "pessimism": "悲观",
+        "poor_memory": "记忆损害",
+        "sleep_disturbance": "睡眠障碍",
+        "somatic_muscle": "躯体肌肉系统症状",
+        "somatic_symptoms_others": "其他躯体症状",
+        "somatic_symptoms_sensory": "躯体感觉系统症状",
+        "weight_and_appetite_change": "体重与食欲改变"
+      }
+    }
+  }
+  
